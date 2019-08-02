@@ -8,9 +8,13 @@
 
     <StackLayout>
         <!-- Place new controls here -->
-        <Label Text="Welcome !" 
+        <Label Text="Войти по:" 
            HorizontalOptions="Center"
            VerticalOptions="CenterAndExpand" />
+        <Button Text="Адресу" 
+                Command="{Binding AddressPageButtonCommand}"
+                HorizontalOptions="Center"
+                VerticalOptions="CenterAndExpand"></Button>
     </StackLayout>
 
 </ContentPage>
