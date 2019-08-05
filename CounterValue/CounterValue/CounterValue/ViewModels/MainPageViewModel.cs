@@ -17,5 +17,12 @@ namespace CounterValue.ViewModels
             await Application.Current.MainPage.Navigation.PushAsync(new AddressPageView());
 
         }));
+
+        private ICommand _accountEntryPageButtonCommand;
+
+        public ICommand AccountEntryPageButtonCommand => _accountEntryPageButtonCommand ?? (_accountEntryPageButtonCommand = new Command(async () =>
+       {
+           await Application.Current.MainPage.Navigation.PushAsync(new AccountEntryPageView());
+       }));
     }
 }
