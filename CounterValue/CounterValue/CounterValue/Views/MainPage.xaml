@@ -7,7 +7,7 @@
              x:Class="CounterValue.Views.MainPage">
 
     <StackLayout>
-        <!-- Place new controls here -->
+        <Image Source="DTEK_Odessa_Logo2_ffdd00.png"/>
         <Label Text="Войти по:" 
            HorizontalOptions="Center"
            VerticalOptions="Center" />
