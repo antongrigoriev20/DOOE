@@ -15,6 +15,10 @@
                 Command="{Binding AddressPageButtonCommand}"
                 HorizontalOptions="Center"
                 VerticalOptions="CenterAndExpand"></Button>
+        <Button Text="Адресу" 
+                Command="{Binding AccountEntryPageButtonCommand}"
+                HorizontalOptions="Center"
+                VerticalOptions="CenterAndExpand"></Button>
     </StackLayout>
 
 </ContentPage>
