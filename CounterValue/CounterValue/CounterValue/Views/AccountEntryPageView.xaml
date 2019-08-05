@@ -10,6 +10,10 @@
             <Label Text="Accounte Entry Page"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
+            <Button Text="!!!" 
+                Command="{Binding AccountEntryPageButtonCommand}"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"></Button>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

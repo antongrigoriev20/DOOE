@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CounterValue.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,9 +11,9 @@ using Xamarin.Forms.Xaml;
 namespace CounterValue.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class CounterValuePageViewModel : ContentPage
+    public partial class CounterValuePageView : ContentPage
     {
-        public CounterValuePageViewModel()
+        public CounterValuePageView()
         {
             InitializeComponent();
             BindingContext = new CounterValuePageViewModel();
