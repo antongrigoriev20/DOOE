@@ -10,15 +10,15 @@
         <!-- Place new controls here -->
         <Label Text="Войти по:" 
            HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
+           VerticalOptions="Center" />
         <Button Text="Адресу" 
                 Command="{Binding AddressPageButtonCommand}"
                 HorizontalOptions="Center"
-                VerticalOptions="CenterAndExpand"></Button>
-        <Button Text="Адресу" 
+                VerticalOptions="Center"></Button>
+        <Button Text="Лицевому счету" 
                 Command="{Binding AccountEntryPageButtonCommand}"
                 HorizontalOptions="Center"
-                VerticalOptions="CenterAndExpand"></Button>
+                VerticalOptions="Center"></Button>
     </StackLayout>
 
 </ContentPage>
