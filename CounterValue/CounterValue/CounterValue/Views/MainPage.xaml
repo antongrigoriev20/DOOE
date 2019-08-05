@@ -7,10 +7,18 @@
              x:Class="CounterValue.Views.MainPage">
 
     <StackLayout>
-        <!-- Place new controls here -->
-        <Label Text="Welcome !" 
+        <Image Source="DTEK_Odessa_Logo2_ffdd00.png"/>
+        <Label Text="Войти по:" 
            HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
+           VerticalOptions="Center" />
+        <Button Text="Адресу" 
+                Command="{Binding AddressPageButtonCommand}"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"></Button>
+        <Button Text="Лицевому счету" 
+                Command="{Binding AccountEntryPageButtonCommand}"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"></Button>
     </StackLayout>
 
 </ContentPage>
