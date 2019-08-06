@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace DotNetConsoleTelegramBot.OdesaoblenergoLib.Responses
+namespace OdesaoblenergoLib.Models.Responses
 {
     public class AddIndicatorsResponse
     {
