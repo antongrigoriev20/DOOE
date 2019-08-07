@@ -6,19 +6,48 @@
              mc:Ignorable="d"
              x:Class="CounterValue.Views.MainPage">
 
-    <StackLayout>
-        <Image Source="DTEK_Odessa_Logo2_ffdd00.png"/>
-        <Label Text="Войти по:" 
-           HorizontalOptions="Center"
-           VerticalOptions="Center" />
-        <Button Text="Адресу" 
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="150" />
+            <RowDefinition Height="50" />
+            <RowDefinition Height="50" />
+            <RowDefinition Height="50" />
+            <RowDefinition Height="50" />
+            <RowDefinition Height="50" />
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <Image Source="DTEK_Odessa_Logo2_ffdd00.png"
+               Grid.ColumnSpan="3" />
+
+        <Label Text="Увійти по:" TextColor="Black" FontSize="Medium"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                Grid.Row="3" Grid.ColumnSpan="3" />
+
+        <Button Text="Адресу" TextColor="Black"
                 Command="{Binding AddressPageButtonCommand}"
+                BackgroundColor="#FFDD00"
+                CornerRadius="20"
+                WidthRequest="200"
                 HorizontalOptions="Center"
-                VerticalOptions="Center"></Button>
-        <Button Text="Лицевому счету" 
+                VerticalOptions="Center"
+                Grid.Row="4" Grid.ColumnSpan="3" ></Button>
+
+        <Button Text="Особовому рахунку" TextColor="Black"
                 Command="{Binding AccountEntryPageButtonCommand}"
+                BackgroundColor="#FFDD00"
+                CornerRadius="20"
+                WidthRequest="200"
                 HorizontalOptions="Center"
-                VerticalOptions="Center"></Button>
-    </StackLayout>
+                VerticalOptions="Center"
+                Grid.Row="5" Grid.ColumnSpan="3" ></Button>
+    </Grid>
 
 </ContentPage>

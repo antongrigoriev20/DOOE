@@ -18,5 +18,10 @@ namespace CounterValue.Views
             InitializeComponent();
             BindingContext = new AccountEntryPageViewModel();
         }
+
+        private void Entry_Completed(object sender, EventArgs e)
+        {
+
+        }
     }
 }

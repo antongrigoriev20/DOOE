@@ -5,6 +5,15 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="CounterValue.Views.AccountEntryPageView">
+<<<<<<< HEAD
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Accounte Entry Page"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+            <Entry Text="{Binding Lic, Mode=TwoWay}"></Entry>
+            <Button Text="Почати" 
+=======
     
     <Grid>
         
@@ -35,6 +44,7 @@
         </Entry>
 
         <Button Text="Почати" TextColor="Black"
+>>>>>>> c5a232fa4f6d63b3f67f9a12ead98b29ca3d0bf5
                 Command="{Binding AccountEntryPageButtonCommand}"
                 BackgroundColor="#FFDD00"
                 CornerRadius="20"
