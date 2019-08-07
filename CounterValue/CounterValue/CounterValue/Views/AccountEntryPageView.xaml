@@ -10,7 +10,7 @@
             <Label Text="Accounte Entry Page"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
-            <Entry Text="{Binding Lic}"></Entry>
+            <Entry Text="{Binding Lic, Mode=TwoWay}"></Entry>
             <Button Text="Почати" 
                 Command="{Binding AccountEntryPageButtonCommand}"
                 HorizontalOptions="Center"

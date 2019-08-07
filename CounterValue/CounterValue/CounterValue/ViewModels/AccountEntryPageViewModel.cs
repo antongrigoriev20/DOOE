@@ -7,19 +7,47 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Net.Http;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Windows.Input;
 using Xamarin.Forms;
 
 namespace CounterValue.ViewModels
 {
-    class AccountEntryPageViewModel
+    class AccountEntryPageViewModel : INotifyPropertyChanged
     {
+        #region INotifyPropertyChanged
+        public event PropertyChangedEventHandler PropertyChanged;
+        protected void OnPropertyChanged(string propName)
+        {
+            if (PropertyChanged != null)
+                PropertyChanged(this, new PropertyChangedEventArgs(propName));
+        }
+        #endregion
+
         #region Interfaces
         private ICommand _accountEntryPageButtonCommand;
         #endregion
 
         #region Properties
-        public string Lic { get; set; }
+        private string lic;
+        public string Lic
+        {
+            get { return lic; }
+            set
+            {
+                if (lic != value && !string.IsNullOrEmpty(value) && Regex.IsMatch(value, @"^\d+$"))
+                {
+                    lic = value;
+                    OnPropertyChanged("Lic");
+                }
+                else
+                {
+                    if (string.IsNullOrEmpty(value))
+                        lic = "";
+                    OnPropertyChanged("Lic");
+                }
+            }
+        }
 
         public ICommand AccountEntryPageButtonCommand => _accountEntryPageButtonCommand ?? (_accountEntryPageButtonCommand = new Command(async () =>
         {
@@ -60,7 +88,7 @@ namespace CounterValue.ViewModels
                         //если ответ корректный
                         if (!string.IsNullOrEmpty(AbonentInfo.response.lsch))
                         {
-                            await Application.Current.MainPage.DisplayAlert("Уведомление", $"Все ок: {AbonentInfo.response.lsch} {AbonentInfo.response.abonaddr}" , "ОK");
+                            await Application.Current.MainPage.DisplayAlert("Уведомление", $"Все ок: {AbonentInfo.response.lsch} {AbonentInfo.response.abonaddr}", "ОK");
                             await Application.Current.MainPage.Navigation.PushModalAsync(new CounterValuePageView());
                             return;
                         }
@@ -75,7 +103,7 @@ namespace CounterValue.ViewModels
                 {
                     await Application.Current.MainPage.DisplayAlert("Уведомление", $"Помилка, спробуйте знову", "ОK");
                 }
-            }           
+            }
         }));
         #endregion
     }
