@@ -30,31 +30,54 @@ namespace CounterValue.ViewModels
         #endregion
 
         #region Properties
-        private string lic;
-        public string Lic
-        {
-            get { return lic; }
-            set
-            {
-                if (lic != value && !string.IsNullOrEmpty(value) && Regex.IsMatch(value, @"^\d+$"))
-                {
-                    lic = value;
-                    OnPropertyChanged("Lic");
-                }
-                else
-                {
-                    if (string.IsNullOrEmpty(value))
-                        lic = "";
-                    OnPropertyChanged("Lic");
-                }
-            }
-        }
+        //private string lic;
+        public string LicLeft { get; set; }
+        //{
+        //    get { return lic; }
+        //    set
+        //    {
+        //        if (lic != value && !string.IsNullOrEmpty(value) && Regex.IsMatch(value, @"^\d+$"))
+        //        {
+        //            lic = value;
+        //            OnPropertyChanged("Lic");
+        //        }
+        //        else
+        //        {
+        //            if (string.IsNullOrEmpty(value))
+        //                lic = "";
+        //            OnPropertyChanged("Lic");
+        //        }
+        //    }
+        //}
+
+        public string LicRight { get; set; }
+        //{
+        //    get { return lic; }
+        //    set
+        //    {
+        //        if (lic != value && !string.IsNullOrEmpty(value) && Regex.IsMatch(value, @"^\d+$"))
+        //        {
+        //            lic = value;
+        //            OnPropertyChanged("Lic");
+        //        }
+        //        else
+        //        {
+        //            if (string.IsNullOrEmpty(value))
+        //                lic = "";
+        //            OnPropertyChanged("Lic");
+        //        }
+        //    }
+        //}
+
+        public string Lic { get; set; }
 
         public ICommand AccountEntryPageButtonCommand => _accountEntryPageButtonCommand ?? (_accountEntryPageButtonCommand = new Command(async () =>
         {
+            Lic = LicLeft + "/" + LicRight;
+
             //если строка содержит "/"
-            if (Lic != null && Lic.Contains("/"))
-            {
+            //if (Lic != null && Lic.Contains("/"))
+            //{
                 //start progreessbar
                 try
                 {
@@ -89,6 +112,7 @@ namespace CounterValue.ViewModels
                         //если ответ корректный
                         if (!string.IsNullOrEmpty(AbonentInfo.response.lsch))
                         {
+                            //записываем данные по лицевому в памяти устройсва
                             CrossSettings.Current.AddOrUpdateValue("lic", response);
 
                             await Application.Current.MainPage.DisplayAlert("Уведомление", $"Все ок: {AbonentInfo.response.lsch} {AbonentInfo.response.abonaddr}", "ОK");
@@ -106,7 +130,7 @@ namespace CounterValue.ViewModels
                 {
                     await Application.Current.MainPage.DisplayAlert("Уведомление", $"Помилка, спробуйте знову", "ОK");
                 }
-            }
+            //}
         }));
         #endregion
     }
