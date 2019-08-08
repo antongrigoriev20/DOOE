@@ -12,7 +12,7 @@ namespace CounterValue
         {
             InitializeComponent();
 
-            //CrossSettings.Current.Clear();
+            CrossSettings.Current.Clear();
             string name = CrossSettings.Current.GetValueOrDefault("lic", null);
 
             if (string.IsNullOrEmpty(name))
