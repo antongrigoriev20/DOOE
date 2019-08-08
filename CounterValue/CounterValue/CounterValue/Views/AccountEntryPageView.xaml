@@ -11,11 +11,11 @@
 
         <Grid.RowDefinitions>
 
-            <RowDefinition Height="3*"/>
-            <RowDefinition Height="2*"/>
-            <RowDefinition Height="50"/>
-            <RowDefinition Height="40"/>
-            <RowDefinition Height="2*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
 
         </Grid.RowDefinitions>
 
@@ -26,11 +26,11 @@
         </Grid.ColumnDefinitions>
 
 
-        <Image Grid.Row="0"  Source="DTEK_Odessa_Logo2_ffdd00.png" Margin="10" />
+        <Image Grid.Row="0"  Source="DTEK_Odessa_Logo2_ffdd00.png" /> <!--Margin=""--> 
 
 
         <Label Text="Номер особистого рахунку:" TextColor="Black"
-               FontSize="Medium" 
+               FontSize="Large" 
                HorizontalOptions="CenterAndExpand"
                HorizontalTextAlignment="Center"
                Grid.Row="2" />
@@ -39,7 +39,7 @@
         <StackLayout  Orientation="Horizontal" HorizontalOptions="Center"
                Grid.Row="3" >
             <Entry Text="{Binding LicLeft}"
-               FontSize="Medium"
+               FontSize="Large"
                MaxLength="5"
                Placeholder="00000"
                Keyboard="Numeric"
@@ -55,7 +55,7 @@
                    VerticalOptions="Center"/>
 
             <Entry Text="{Binding LicRight}"
-               FontSize="Medium"
+               FontSize="Large"
                MaxLength="8"
                Placeholder="00000000"
                Keyboard="Numeric"
@@ -66,10 +66,13 @@
         </StackLayout>
 
 
-        <Button Text="Почати" TextColor="Black" Grid.Row="5"
+        <Button Text="Почати" TextColor="Black" Grid.Row="4"
                 Command="{Binding AccountEntryPageButtonCommand}"
                 BackgroundColor="#FFDD00"
                 CornerRadius="20"
+                WidthRequest="250"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
                 >
         </Button>
     </Grid>
