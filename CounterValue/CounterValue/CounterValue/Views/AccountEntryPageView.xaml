@@ -26,19 +26,24 @@
         </Grid.ColumnDefinitions>
 
 
-        <Image Grid.Row="0"  Source="DTEK_Odessa_Logo2_ffdd00.png" /> <!--Margin=""--> 
+        <Image Grid.Row="0"  Source="DTEK_Odessa_Logo2_ffdd00.png" />
 
+        <StackLayout  Orientation="Vertical" 
+                      HorizontalOptions="Center"
+                      Grid.Row="2" >
 
-        <Label Text="Номер особистого рахунку:" TextColor="Black"
+            <Label Text="Номер особистого рахунку:" 
+               TextColor="Black"
                FontSize="Large" 
                HorizontalOptions="CenterAndExpand"
-               HorizontalTextAlignment="Center"
-               Grid.Row="2" />
-        
+               HorizontalTextAlignment="Center" 
+               Grid.Row="2"/>
 
-        <StackLayout  Orientation="Horizontal" HorizontalOptions="Center"
-               Grid.Row="3" >
-            <Entry Text="{Binding LicLeft}"
+            <StackLayout  Orientation="Horizontal" 
+                      HorizontalOptions="Center"
+                      Grid.Row="3" >
+
+                <Entry Text="{Binding LicLeft}"
                FontSize="Large"
                MaxLength="5"
                Placeholder="00000"
@@ -46,15 +51,17 @@
                VerticalOptions="CenterAndExpand"               
                HorizontalOptions="Start"
                Completed="Entry_Completed">
-                
-            </Entry>
 
-            <Label Text="/" TextColor="Black"
+                </Entry>
+
+                <Label Text="/" 
+                   TextColor="Black"
                    FontSize="Large"
                    HorizontalOptions="Center"
-                   VerticalOptions="Center"/>
+                   VerticalOptions="Center">
+                </Label>
 
-            <Entry Text="{Binding LicRight}"
+                <Entry Text="{Binding LicRight}"
                FontSize="Large"
                MaxLength="8"
                Placeholder="00000000"
@@ -62,19 +69,24 @@
                VerticalOptions="CenterAndExpand"               
                HorizontalOptions="End"
                Completed="Entry_Completed">
-            </Entry>
-        </StackLayout>
+                </Entry>
+
+            </StackLayout>
 
 
-        <Button Text="Почати" TextColor="Black" Grid.Row="4"
+            <Button Text="Почати" 
+                TextColor="Black" 
+                Grid.Row="4"
                 Command="{Binding AccountEntryPageButtonCommand}"
                 BackgroundColor="#FFDD00"
                 CornerRadius="20"
                 WidthRequest="250"
                 HorizontalOptions="Center"
-                VerticalOptions="Center"
-                >
-        </Button>
+                VerticalOptions="Center">
+            </Button>
+
+        </StackLayout>
+
     </Grid>
  
 </ContentPage>

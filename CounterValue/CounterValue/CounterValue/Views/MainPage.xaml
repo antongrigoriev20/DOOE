@@ -6,54 +6,63 @@
              mc:Ignorable="d"
              x:Class="CounterValue.Views.MainPage">
 
-    <Grid>
+    <Grid HorizontalOptions="Center">
 
         <Grid.RowDefinitions>
 
-            <RowDefinition Height="150" />
-            <RowDefinition Height="100" />
-            <RowDefinition Height="50" />
-            <RowDefinition Height="50" />
-            <RowDefinition Height="50" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
 
         </Grid.RowDefinitions>
 
         <Grid.ColumnDefinitions>
 
             <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="*" />
 
         </Grid.ColumnDefinitions>
 
         <Image Source="DTEK_Odessa_Logo2_ffdd00.png"
-               Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="3"/>
-        
-        <Label Text="Увійти по:" TextColor="Black" FontSize="Medium"
-                HorizontalOptions="Center"
-                VerticalOptions="Center"
-                Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="3" />
+               Grid.Row="0"/>
 
-        <Button Text="Адресу" TextColor="Black"
+        <StackLayout Orientation="Vertical" 
+                     HorizontalOptions="Center"
+                     Grid.Row="2">
+
+            <Label Text="Увійти по:" 
+               TextColor="Black" 
+               FontSize="Large"
+               HorizontalOptions="Center"
+               VerticalOptions="Center"/>
+
+
+
+            <Button Text="Адресу" 
+                TextColor="Black"
                 Command="{Binding AddressPageButtonCommand}"
                 BackgroundColor="#FFDD00"
                 CornerRadius="20"
-                WidthRequest="200"
-                HorizontalOptions="Center"
-                VerticalOptions="Center"
-                Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="3" >
-        </Button>
+                WidthRequest="250"
+                HorizontalOptions="CenterAndExpand"
+                VerticalOptions="Center">
+                <!--Grid.Row="3"-->
+            </Button>
 
-        <Button Text="Особовому рахунку" TextColor="Black"
+            <Button Text="Особовому рахунку" 
+                TextColor="Black"
                 Command="{Binding AccountEntryPageButtonCommand}"
                 BackgroundColor="#FFDD00"
                 CornerRadius="20"
                 WidthRequest="250"
                 HorizontalOptions="Center"
-                VerticalOptions="Center"
-                Grid.Column="0" Grid.Row="4" Grid.ColumnSpan="3" >
-        </Button>
-
+                VerticalOptions="Center">
+                <!--Grid.Row="4"-->
+            </Button>
+            
+        </StackLayout>
+        
     </Grid>
 
 </ContentPage>
