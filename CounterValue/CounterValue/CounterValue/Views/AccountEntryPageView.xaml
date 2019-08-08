@@ -5,33 +5,68 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="CounterValue.Views.AccountEntryPageView">
-    
+
     <Grid>
-        
+
         <Grid.RowDefinitions>
-            <RowDefinition Height="150" />
-            <RowDefinition Height="50" />
-            <RowDefinition Height="100" />
-            <RowDefinition Height="50" />
-            <RowDefinition Height="50" />
+
+            <RowDefinition Height="150"/>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="55"/>
+            <RowDefinition Height="55"/>
+            <RowDefinition Height="55"/>
+
         </Grid.RowDefinitions>
 
         <Grid.ColumnDefinitions>
+
             <ColumnDefinition Width="*" />
             <ColumnDefinition Width="*" />
             <ColumnDefinition Width="*" />
+ 
         </Grid.ColumnDefinitions>
-
+        
         <Image Source="DTEK_Odessa_Logo2_ffdd00.png"
-               Grid.ColumnSpan="3" />
+               Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="3"/>
 
-        <Entry Text="{Binding Lic}"
-                Placeholder="Номер особистого рахунку"
-                Keyboard="Numeric"
-                VerticalOptions="CenterAndExpand"               
-                HorizontalOptions="CenterAndExpand"
-                Completed="Entry_Completed"
-                Grid.Row="2" Grid.ColumnSpan="3">
+        <Label Text="Номер особистого рахунку:" TextColor="Black"
+               FontSize="Medium" 
+               HorizontalOptions="CenterAndExpand"
+               HorizontalTextAlignment="Center"
+               Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="3"/>
+
+        <Entry Text="{Binding LicLeft}"
+               FontSize="Medium"
+               MaxLength="5"
+               Placeholder="00000"
+               Keyboard="Numeric"
+               VerticalOptions="CenterAndExpand"               
+               HorizontalOptions="Start"
+               Completed="Entry_Completed"              
+               Grid.Column="0" 
+               Grid.Row="3" 
+               Grid.ColumnSpan="3">
+        </Entry>
+
+        <Label Text="/" TextColor="Black"
+                   FontSize="Large"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"
+                   Grid.Column="0"
+                   Grid.Row="3" 
+                   Grid.ColumnSpan="3" />
+        
+        <Entry Text="{Binding LicRight}"
+               FontSize="Medium"
+               MaxLength="8"
+               Placeholder="00000000"
+               Keyboard="Numeric"
+               VerticalOptions="CenterAndExpand"               
+               HorizontalOptions="End"
+               Completed="Entry_Completed"
+               Grid.Column="0" 
+               Grid.Row="3" 
+               Grid.ColumnSpan="3">
         </Entry>
 
         <Button Text="Почати" TextColor="Black"
@@ -41,9 +76,12 @@
                 WidthRequest="200"
                 HorizontalOptions="Center"
                 VerticalOptions="Center"
-                Grid.Row="4" Grid.ColumnSpan="3" >
+                Grid.Column="0"
+                Grid.Row="5" 
+                Grid.ColumnSpan="3" >
         </Button>
 
-    </Grid>
 
+    </Grid>
+    
 </ContentPage>
