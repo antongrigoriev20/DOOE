@@ -2,6 +2,7 @@
 using Newtonsoft.Json;
 using OdesaoblenergoLib.Models.Requests;
 using OdesaoblenergoLib.Models.Responses;
+using Plugin.Settings;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -88,6 +89,8 @@ namespace CounterValue.ViewModels
                         //если ответ корректный
                         if (!string.IsNullOrEmpty(AbonentInfo.response.lsch))
                         {
+                            CrossSettings.Current.AddOrUpdateValue("lic", response);
+
                             await Application.Current.MainPage.DisplayAlert("Уведомление", $"Все ок: {AbonentInfo.response.lsch} {AbonentInfo.response.abonaddr}", "ОK");
                             await Application.Current.MainPage.Navigation.PushModalAsync(new CounterValuePageView());
                             return;
