@@ -13,7 +13,7 @@
 
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="3*"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
 
@@ -25,8 +25,9 @@
 
         </Grid.ColumnDefinitions>
 
-
-        <Image Grid.Row="0"  Source="DTEK_Odessa_Logo2_ffdd00.png" />
+        <StackLayout>
+            <Image Grid.Row="0" Source="DTEK_Odessa_Logo2_ffdd00.png" Margin="10" />
+        </StackLayout>
 
         <StackLayout  Orientation="Vertical" 
                       HorizontalOptions="Center"

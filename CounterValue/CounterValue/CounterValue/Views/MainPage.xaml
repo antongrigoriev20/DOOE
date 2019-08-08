@@ -23,10 +23,9 @@
             <ColumnDefinition Width="*" />
 
         </Grid.ColumnDefinitions>
-
-        <Image Source="DTEK_Odessa_Logo2_ffdd00.png"
-               Grid.Row="0"/>
-
+        <StackLayout>
+            <Image Grid.Row="0" Source="DTEK_Odessa_Logo2_ffdd00.png" Margin="10" />
+        </StackLayout>
         <StackLayout Orientation="Vertical" 
                      HorizontalOptions="Center"
                      Grid.Row="2">
@@ -47,7 +46,6 @@
                 WidthRequest="250"
                 HorizontalOptions="CenterAndExpand"
                 VerticalOptions="Center">
-                <!--Grid.Row="3"-->
             </Button>
 
             <Button Text="Особовому рахунку" 
@@ -58,7 +56,6 @@
                 WidthRequest="250"
                 HorizontalOptions="Center"
                 VerticalOptions="Center">
-                <!--Grid.Row="4"-->
             </Button>
             
         </StackLayout>
