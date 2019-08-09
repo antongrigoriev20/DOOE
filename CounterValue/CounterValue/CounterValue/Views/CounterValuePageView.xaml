@@ -6,7 +6,7 @@
              mc:Ignorable="d"
              x:Class="CounterValue.Views.CounterValuePageView">
 
-    <Grid HorizontalOptions="Center">
+    <Grid>
 
         <Grid.RowDefinitions>
             <RowDefinition Height="*" />
@@ -22,13 +22,46 @@
         </Grid.ColumnDefinitions>
 
 
-
             <BoxView Color="Red"    Grid.Row="0" />
-            <BoxView Color="Yellow" Grid.Row="1" />
-            <BoxView Color="Green"  Grid.Row="2" />
-            <BoxView Color="Black"  Grid.Row="3" />
-            <BoxView Color="Gray"   Grid.Row="4" />
-            <BoxView Color="Purple" Grid.Row="5" />
+
+            <DatePicker MinimumDate="01/01/2019"
+                    MaximumDate="01/01/2050"
+                    Date="08/09/2019" 
+                    Grid.Row="1"
+                    TextColor="Gray"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"/>
+
+        <StackLayout Orientation="Vertical" Grid.Row="2">
+            <Label x:Name="lbldisp" VerticalOptions="Center" 
+                   HorizontalOptions="Center">
+            </Label>
+        <Stepper Value="5" Minimum="0" Maximum="9"
+                 HorizontalOptions="LayoutOptions.Center" 
+                 VerticalOptions="LayoutOptions.CenterAndExpand" 
+                 ValueChanged="OnValueChanged" />
+        </StackLayout>
+
+        <Button Text="Додати" 
+                TextColor="Black"
+                Command="{Binding}"
+                BackgroundColor="#EAEDED"
+                CornerRadius="20"
+                WidthRequest="200"
+                Grid.Row="3"
+                HorizontalOptions="Center"
+                VerticalOptions="Center">
+            </Button>
+
+            <Label Text="Попередні показники:" 
+               TextColor="Gray" 
+               FontSize="Large"
+               Grid.Row="4"
+               HorizontalOptions="Center"
+               VerticalOptions="Center"/>
+
+            <BoxView Color="Green" Grid.Row="5" />
+
 
     </Grid>
 
