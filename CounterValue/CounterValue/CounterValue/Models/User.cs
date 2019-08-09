@@ -1,0 +1,14 @@
+﻿using OdesaoblenergoLib.Models.Responses;
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace CounterValue.Models
+{
+    public class User
+    {
+        public SelectIndicatorsResponse IndicatorsResponse { get; set; }
+        public AbonentInfoResponse AbonentInfo { get; set; }
+
+    }
+}

@@ -5,6 +5,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="CounterValue.Views.CounterValuePageView">
+<<<<<<< HEAD
 
     <Grid>
 
@@ -40,6 +41,13 @@
                  HorizontalOptions="LayoutOptions.Center" 
                  VerticalOptions="LayoutOptions.CenterAndExpand" 
                  ValueChanged="OnValueChanged" />
+=======
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="{Binding Lic}"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+>>>>>>> b98c98ece2b3b9360afe78e71118b40f1031a7ed
         </StackLayout>
 
         <Button Text="Додати" 
