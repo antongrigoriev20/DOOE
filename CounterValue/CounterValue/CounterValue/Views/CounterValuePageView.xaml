@@ -5,7 +5,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="CounterValue.Views.CounterValuePageView">
-<<<<<<< HEAD
+
 
     <Grid>
 
@@ -37,17 +37,11 @@
             <Label x:Name="lbldisp" VerticalOptions="Center" 
                    HorizontalOptions="Center">
             </Label>
-        <Stepper Value="5" Minimum="0" Maximum="9"
+        <Stepper Value="5" Minimum="1" Maximum="9"
                  HorizontalOptions="LayoutOptions.Center" 
                  VerticalOptions="LayoutOptions.CenterAndExpand" 
                  ValueChanged="OnValueChanged" />
-=======
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="{Binding Lic}"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
->>>>>>> b98c98ece2b3b9360afe78e71118b40f1031a7ed
+
         </StackLayout>
 
         <Button Text="Додати" 
