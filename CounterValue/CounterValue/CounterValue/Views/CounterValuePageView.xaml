@@ -7,63 +7,246 @@
              x:Class="CounterValue.Views.CounterValuePageView">
 
 
-    <Grid>
+
+    <Grid HorizontalOptions="CenterAndExpand" Margin="15,15,15,15">
+     
 
         <Grid.RowDefinitions>
-            <RowDefinition Height="*" />
-            <RowDefinition Height="*" />
-            <RowDefinition Height="*" />
-            <RowDefinition Height="*" />
-            <RowDefinition Height="*" />
-            <RowDefinition Height="*" />
+            <RowDefinition Height="30" />
+            <RowDefinition Height="55" />
+            <RowDefinition Height="50" />
+            <RowDefinition Height="70" />
+            <RowDefinition Height="50" />
+            <RowDefinition Height="70" />
+            <RowDefinition Height="50" />
+            <RowDefinition Height="60" />
         </Grid.RowDefinitions>
 
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
 
-
-            <BoxView Color="Red"    Grid.Row="0" />
-
-            <DatePicker MinimumDate="01/01/2019"
+        
+        <DatePicker 
+                    MinimumDate="01/01/2019"
                     MaximumDate="01/01/2050"
-                    Date="08/09/2019" 
-                    Grid.Row="1"
+                    Date="08/09/2019"
                     TextColor="Gray"
+                    FontSize="Medium"
                     HorizontalOptions="Center"
-                    VerticalOptions="Center"/>
+                    VerticalOptions="Center"
+                    Grid.Column="0" 
+                    Grid.Row="1"
+                    Grid.ColumnSpan="5"/>
 
-        <StackLayout Orientation="Vertical" Grid.Row="2">
-            <Label x:Name="lbldisp" VerticalOptions="Center" 
-                   HorizontalOptions="Center">
-            </Label>
-        <Stepper Value="5" Minimum="1" Maximum="9"
-                 HorizontalOptions="LayoutOptions.Center" 
-                 VerticalOptions="LayoutOptions.CenterAndExpand" 
-                 ValueChanged="OnValueChanged" />
 
-        </StackLayout>
 
-        <Button Text="Додати" 
+        <Button
+            Text="＋"                    
+            FontSize="Large"
+            TextColor="#FFDD00"
+            BackgroundColor="#EAEDED"
+            HorizontalOptions="CenterAndExpand"
+            VerticalOptions="Center"     
+            CornerRadius="15"
+            Grid.Column="0" 
+            Grid.Row="2">
+        </Button>
+
+            <Button
+            Text="＋"
+            FontSize="Large"
+            TextColor="#FFDD00"
+            BackgroundColor="#EAEDED"
+            HorizontalOptions="CenterAndExpand"
+            VerticalOptions="Center"
+            CornerRadius="15"
+            Grid.Column="1" 
+            Grid.Row="2">
+            </Button>
+
+            <Button
+            Text="＋"
+            FontSize="Large"
+            TextColor="#FFDD00"
+            BackgroundColor="#EAEDED"
+            HorizontalOptions="CenterAndExpand"
+            VerticalOptions="Center" 
+            CornerRadius="15"
+            Grid.Column="2" 
+            Grid.Row="2">
+            </Button>
+
+            <Button
+            Text="＋"
+            FontSize="Large"
+            TextColor="#FFDD00"
+            BackgroundColor="#EAEDED"
+            HorizontalOptions="CenterAndExpand"
+            VerticalOptions="Center"
+            CornerRadius="15"
+            Grid.Column="3" 
+            Grid.Row="2">
+            </Button>
+
+            <Button
+            Text="＋"
+            FontSize="Large"
+            TextColor="#FFDD00"
+            BackgroundColor="#EAEDED"
+            HorizontalOptions="CenterAndExpand"
+            VerticalOptions="Center"
+            CornerRadius="15"
+            Grid.Column="4" 
+            Grid.Row="2">
+            </Button>
+
+        <Button
+            Text="━━"
+            FontSize="Large"
+            TextColor="#FFDD00"
+            BackgroundColor="#EAEDED"
+            HorizontalOptions="CenterAndExpand"
+            VerticalOptions="Center"
+            CornerRadius="15"
+            Grid.Column="0" 
+            Grid.Row="4">
+            </Button>
+
+            <Button
+            Text="━━"
+            FontSize="Large"
+            TextColor="#FFDD00"
+            BackgroundColor="#EAEDED"
+            HorizontalOptions="CenterAndExpand"
+            VerticalOptions="Center"
+            CornerRadius="15"
+            Grid.Column="1" 
+            Grid.Row="4">
+            </Button>
+
+            <Button
+            Text="━━"
+            FontSize="Large"
+            TextColor="#FFDD00"
+            BackgroundColor="#EAEDED"
+            HorizontalOptions="CenterAndExpand"
+            VerticalOptions="Center"
+            CornerRadius="15"
+            Grid.Column="2" 
+            Grid.Row="4">
+            </Button>
+
+            <Button
+            Text="━━"
+            FontSize="Large"
+            TextColor="#FFDD00"
+            BackgroundColor="#EAEDED"
+            HorizontalOptions="CenterAndExpand"
+            VerticalOptions="Center"
+            CornerRadius="15"
+            Grid.Column="3" 
+            Grid.Row="4">
+            </Button>
+
+            <Button
+            Text="━━"
+            FontSize="Large"
+            TextColor="#FFDD00"
+            BackgroundColor="#EAEDED"
+            HorizontalOptions="CenterAndExpand"
+            VerticalOptions="Center"
+            CornerRadius="15"
+            Grid.Column="4" 
+            Grid.Row="4">
+            </Button>
+
+            <Button 
+                Text="Додати" 
                 TextColor="Black"
                 Command="{Binding}"
                 BackgroundColor="#EAEDED"
                 CornerRadius="20"
                 WidthRequest="200"
-                Grid.Row="3"
+                Grid.Row="5"
+                Grid.Column="0"
+                Grid.ColumnSpan="5"              
                 HorizontalOptions="Center"
                 VerticalOptions="Center">
             </Button>
 
-            <Label Text="Попередні показники:" 
+            <Label 
+               Text="Попередні показники:"
+               HorizontalTextAlignment="Center"
                TextColor="Gray" 
-               FontSize="Large"
-               Grid.Row="4"
-               HorizontalOptions="Center"
+               FontSize="Medium"
+               Grid.Row="6"
+               Grid.Column="0"
+               Grid.ColumnSpan="5"              
+               HorizontalOptions="CenterAndExpand"
                VerticalOptions="Center"/>
 
-            <BoxView Color="Green" Grid.Row="5" />
 
+        <DatePicker
+                    MinimumDate="01/01/2019"
+                    MaximumDate="01/01/2050"
+                    Date="07/08/2019"
+                    TextColor="Gray"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"
+                    Grid.Column="0" 
+                    Grid.Row="7"
+                    Grid.ColumnSpan="5"/>
+
+        <BoxView Color="Black" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="5" />
+        <!--<BoxView Color="Blue" Grid.Column="0" Grid.Row="1" />
+        <BoxView Color="Fuchsia" Grid.Column="0" Grid.Row="2" />--><!--
+        <BoxView Color="#EAEDED" Grid.Column="0" Grid.Row="3" CornerRadius="50" />
+        --><!--<BoxView Color="Blue" Grid.Column="0" Grid.Row="4" />
+        <BoxView Color="Fuchsia" Grid.Column="0" Grid.Row="5" />-->
+        <!--<BoxView Color="Red" Grid.Column="0" Grid.Row="6" />-->
+        <!--<BoxView Color="Blue" Grid.Column="0" Grid.Row="7" />-->
+        <BoxView Color="Black" Grid.Column="0" Grid.Row="8" Grid.ColumnSpan="5"/>
+
+        <!--<BoxView Color="Red" Grid.Column="1" Grid.Row="0" />
+        <BoxView Color="Blue" Grid.Column="1" Grid.Row="1" />
+        <BoxView Color="Fuchsia" Grid.Column="1" Grid.Row="2" />--><!--
+        <BoxView Color="#EAEDED" Grid.Column="1" Grid.Row="3" CornerRadius="50" />
+        --><!--<BoxView Color="Blue" Grid.Column="1" Grid.Row="4" />
+        <BoxView Color="Fuchsia" Grid.Column="1" Grid.Row="5" />
+        <BoxView Color="Red" Grid.Column="1" Grid.Row="6" />
+        <BoxView Color="Blue" Grid.Column="1" Grid.Row="7" />
+        <BoxView Color="#FFDD00" Grid.Column="1" Grid.Row="8" />
+
+        <BoxView Color="Red" Grid.Column="2" Grid.Row="0" />
+        <BoxView Color="Blue" Grid.Column="2" Grid.Row="1" />
+        <BoxView Color="Fuchsia" Grid.Column="2" Grid.Row="2" />--><!--
+        <BoxView Color="#EAEDED" Grid.Column="2" Grid.Row="3" CornerRadius="50" />
+        --><!--<BoxView Color="Blue" Grid.Column="2" Grid.Row="4" />
+        <BoxView Color="Fuchsia" Grid.Column="2" Grid.Row="5" />
+        <BoxView Color="Red" Grid.Column="2" Grid.Row="6" />
+        <BoxView Color="Blue" Grid.Column="2" Grid.Row="7" />
+        <BoxView Color="#FFDD00" Grid.Column="2" Grid.Row="8" />
+
+        <BoxView Color="Red" Grid.Column="3" Grid.Row="0" />
+        <BoxView Color="Blue" Grid.Column="3" Grid.Row="1" />
+        <BoxView Color="Fuchsia" Grid.Column="3" Grid.Row="2" />-->
+        <!--<BoxView Color="#EAEDED" Grid.Column="3" Grid.Row="3" CornerRadius="50" />-->
+        <!--<BoxView Color="Blue" Grid.Column="3" Grid.Row="4" />
+        <BoxView Color="Fuchsia" Grid.Column="3" Grid.Row="5" />
+        <BoxView Color="Red" Grid.Column="3" Grid.Row="6" />
+        <BoxView Color="Blue" Grid.Column="3" Grid.Row="7" />
+        <BoxView Color="#FFDD00" Grid.Column="3" Grid.Row="8" />-->
+
+        <!--<BoxView Color="Red" Grid.Column="4" Grid.Row="0" />
+        <BoxView Color="Blue" Grid.Column="4" Grid.Row="1" />
+        <BoxView Color="Fuchsia" Grid.Column="4" Grid.Row="2" />--><!--
+        <BoxView Color="#EAEDED" Grid.Column="4" Grid.Row="3" CornerRadius="50" />
+        --><!--<BoxView Color="Blue" Grid.Column="4" Grid.Row="4" />
+        <BoxView Color="Fuchsia" Grid.Column="4" Grid.Row="5" />
+        <BoxView Color="Red" Grid.Column="4" Grid.Row="6" />
+        <BoxView Color="Blue" Grid.Column="4" Grid.Row="7" />
+        <BoxView Color="#FFDD00" Grid.Column="4" Grid.Row="8" />-->
 
     </Grid>
 
