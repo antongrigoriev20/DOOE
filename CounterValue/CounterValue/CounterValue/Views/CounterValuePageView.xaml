@@ -34,19 +34,19 @@
                     VerticalOptions="Center"/>
 
         <StackLayout Orientation="Vertical" Grid.Row="2">
-            <Label x:Name="lbldisp" VerticalOptions="Center" 
+            <Label Text="{Binding Lic}" VerticalOptions="Center" 
                    HorizontalOptions="Center">
             </Label>
         <Stepper Value="5" Minimum="1" Maximum="9"
                  HorizontalOptions="LayoutOptions.Center" 
                  VerticalOptions="LayoutOptions.CenterAndExpand" 
-                 ValueChanged="OnValueChanged" />
-
+                  />
+            <Entry Text="{Binding CounterValue}"></Entry>
         </StackLayout>
-
+        
         <Button Text="Додати" 
                 TextColor="Black"
-                Command="{Binding}"
+                Command="{Binding SendIndicators}"
                 BackgroundColor="#EAEDED"
                 CornerRadius="20"
                 WidthRequest="200"

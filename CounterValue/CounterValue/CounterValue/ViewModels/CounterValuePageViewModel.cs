@@ -24,11 +24,13 @@ namespace CounterValue.ViewModels
 
         User User;
         public string Lic { get; set; }
-
+        public string CounterValue { get; set; }
+       
         private ICommand _sendIndicators;
 
         public ICommand SendIndicators => _sendIndicators ?? (_sendIndicators = new Command(async () =>
         {
+            string s = CounterValue;
             //await Application.Current.MainPage.Navigation.PushAsync(new AccountEntryPageView());
         }));
     }
