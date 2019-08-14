@@ -74,6 +74,8 @@ namespace CounterValue.ViewModels
 
         public ICommand AccountEntryPageButtonCommand => _accountEntryPageButtonCommand ?? (_accountEntryPageButtonCommand = new Command(async () =>
         {
+            await Application.Current.MainPage.Navigation.PushModalAsync(new CounterValuePageView());
+            return;
             Lic = LicLeft + "/" + LicRight;
 
             //если строка содержит "/"

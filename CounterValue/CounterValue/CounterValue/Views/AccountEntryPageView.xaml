@@ -17,7 +17,7 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
 
-        </Grid.RowDefinitions>
+        </Grid.RowDefinitions>      
 
         <Grid.ColumnDefinitions>
 
@@ -33,18 +33,22 @@
                       HorizontalOptions="Center"
                       Grid.Row="2" >
 
-            <Label Text="Номер особистого рахунку:" 
+            <Label 
+               Text="Номер особистого рахунку:" 
                TextColor="Black"
+               FontAttributes="Italic"
                FontSize="Large" 
                HorizontalOptions="CenterAndExpand"
                HorizontalTextAlignment="Center" 
                Grid.Row="2"/>
 
-            <StackLayout  Orientation="Horizontal" 
-                      HorizontalOptions="Center"
-                      Grid.Row="3" >
+            <StackLayout  
+                Orientation="Horizontal" 
+                HorizontalOptions="Center"
+                Grid.Row="3" >
 
-                <Entry Text="{Binding LicLeft}"
+                <Entry 
+               Text="{Binding LicLeft}"
                FontSize="Large"
                MaxLength="5"
                Placeholder="00000"
@@ -54,14 +58,16 @@
 
                 </Entry>
 
-                <Label Text="/" 
+                <Label 
+                   Text="/" 
                    TextColor="Black"
                    FontSize="Large"
                    HorizontalOptions="Center"
                    VerticalOptions="Center">
                 </Label>
 
-                <Entry Text="{Binding LicRight}"
+                <Entry 
+               Text="{Binding LicRight}"                      
                FontSize="Large"
                MaxLength="8"
                Placeholder="00000000"
@@ -73,7 +79,9 @@
             </StackLayout>
 
 
-            <Button Text="Почати" 
+            <Button 
+                Text="Почати" 
+                FontAttributes="Italic"
                 TextColor="Black" 
                 Grid.Row="4"
                 Command="{Binding AccountEntryPageButtonCommand}"

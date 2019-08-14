@@ -5,6 +5,8 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="CounterValue.Views.MainPage">
+    
+    
 
     <Grid HorizontalOptions="Center">
 
@@ -23,23 +25,29 @@
             <ColumnDefinition Width="*" />
 
         </Grid.ColumnDefinitions>
+        
         <StackLayout>
             <Image Grid.Row="0" Source="DTEK_Odessa_Logo2_ffdd00.png" Margin="10" />
         </StackLayout>
+        
         <StackLayout Orientation="Vertical" 
                      HorizontalOptions="Center"
                      Grid.Row="2">
 
-            <Label Text="Увійти по:" 
+            <Label 
+               Text="Увійти по:" 
                TextColor="Black" 
+               FontAttributes="Italic"
                FontSize="Large"
                HorizontalOptions="Center"
                VerticalOptions="Center"/>
 
 
 
-            <Button Text="Адресу" 
+            <Button 
+                Text="Адресу" 
                 TextColor="Black"
+                FontAttributes="Italic"
                 Command="{Binding AddressPageButtonCommand}"
                 BackgroundColor="#FFDD00"
                 CornerRadius="20"
@@ -50,6 +58,7 @@
 
             <Button Text="Особовому рахунку" 
                 TextColor="Black"
+                FontAttributes="Italic"
                 Command="{Binding AccountEntryPageButtonCommand}"
                 BackgroundColor="#FFDD00"
                 CornerRadius="20"
