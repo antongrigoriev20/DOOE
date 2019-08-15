@@ -8,235 +8,291 @@
 
 
     <StackLayout VerticalOptions="CenterAndExpand">
-        
-        <Label BackgroundColor="Black" />
-        
-        <DatePicker 
-                    MinimumDate="01/01/2019"
-                    MaximumDate="01/01/2050"
-                    Date="08/09/2019"
-                    TextColor="Gray"
-                    FontSize="Medium"
-                    HorizontalOptions="Center"
-                    VerticalOptions="Center"/>
-        
+        <Label BackgroundColor="Aqua" Text="{Binding Lic}"></Label>
         <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
 
-            <Grid IsVisible="{Binding IsVisibleDigito}">
-
+            <Grid IsVisible="{Binding IsVisibleDigit9}">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
-
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
                 </Grid.ColumnDefinitions>
-
-                <Button
-                       Text="＋"
-                        FontSize="Large"
-                        TextColor="#FFDD00"
-                        BackgroundColor="#EAEDED"
-                        CornerRadius="15"
-                        Grid.Row="0"
-                       Grid.Column="0">
+                <Button Grid.Row="0" 
+                            Text="+" 
+                            FontSize="Large"
+                            Grid.Column="0" 
+                            Command="{Binding Path=BtnTappedCommand}"
+                            CommandParameter="0">
                 </Button>
-                
-                <!--<BoxView Color="#EAEDED" Grid.Column="0" Grid.Row="1"/>-->
-                
-                <!--<Entry
-                    Text="1"
-                    TextColor="Black"
-                    BackgroundColor="#EAEDED"
-                    FontSize="Large"
-                    HorizontalTextAlignment="Center"               
-                    Grid.Row="1" 
-                    Grid.Column="0"/>-->
-                <Button 
-                        Text="1"
-                        FontSize="Large" 
-                        TextColor="Black"
-                        IsEnabled="False"
-                        BackgroundColor="#EAEDED" 
-                        CornerRadius="15"
-                        Grid.Row="1"
-                        Grid.Column="0"/>
-
-                <Button
-                       Text="━━"
-                        FontSize="Large"
-                        TextColor="#FFDD00"
-                        BackgroundColor="#EAEDED"
-                        CornerRadius="15"
-                        Grid.Row="2"
-                       Grid.Column="0">
+                <Label HorizontalOptions="CenterAndExpand" 
+                       VerticalOptions="CenterAndExpand"
+                       Grid.Row="1"
+                       Grid.Column="0" 
+                       FontSize="Large"
+                       Text="9">
+                </Label>
+                <Button Grid.Row="2" 
+                            Text="-"
+                            FontSize="Large"
+                            Grid.Column="0" 
+                            Command="{Binding Path=BtnTappedCommand}"
+                            CommandParameter="0">
                 </Button>
-
             </Grid>
 
-            <Grid IsVisible="{Binding IsVisibleDigito}">
-
+            <Grid IsVisible="{Binding IsVisibleDigit8}">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
-
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
                 </Grid.ColumnDefinitions>
-
-                <Button
-                       Text="＋"
-                        FontSize="Large"
-                        TextColor="#FFDD00"
-                        BackgroundColor="#EAEDED"
-                        CornerRadius="15"
-                        Grid.Row="0"
-                       Grid.Column="0">
+                <Button Grid.Row="0" 
+                            Text="+" 
+                            FontSize="Large"
+                            Grid.Column="0" 
+                            Command="{Binding Path=BtnTappedCommand}"
+                            CommandParameter="0">
                 </Button>
-                
-                <BoxView Color="#EAEDED" Grid.Column="0" Grid.Row="1"/>
-                
-                <Label
-                    Text="1" 
-                    TextColor="Black"
-                    FontSize="Large"
-                    HorizontalTextAlignment="Center"               
-                    Grid.Row="1" 
-                    Grid.Column="0"/>
-
-                <Button
-                       Text="━━"
-                        FontSize="Large"
-                        TextColor="#FFDD00"
-                        BackgroundColor="#EAEDED"
-                        CornerRadius="15"
-                        Grid.Row="2"
-                       Grid.Column="0">
+                <Label HorizontalOptions="CenterAndExpand" 
+                       VerticalOptions="CenterAndExpand"
+                       Grid.Row="1"
+                       Grid.Column="0" 
+                       FontSize="Large"
+                       Text="9">
+                </Label>
+                <Button Grid.Row="2" 
+                            Text="-"
+                            FontSize="Large"
+                            Grid.Column="0" 
+                            Command="{Binding Path=BtnTappedCommand}"
+                            CommandParameter="0">
                 </Button>
-
             </Grid>
 
-            <Grid IsVisible="{Binding IsVisibleDigito}">
-
+            <Grid IsVisible="{Binding IsVisibleDigit7}">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
-
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
                 </Grid.ColumnDefinitions>
-
-                <Button
-                       Text="＋"
-                        FontSize="Large"
-                        TextColor="#FFDD00"
-                        BackgroundColor="#EAEDED"
-                        CornerRadius="15"
-                        Grid.Row="0"
-                       Grid.Column="0">
+                <Button Grid.Row="0" 
+                            Text="+" 
+                            FontSize="Large"
+                            Grid.Column="0" 
+                            Command="{Binding Path=BtnTappedCommand}"
+                            CommandParameter="0">
                 </Button>
-
-                <BoxView Color="#EAEDED" Grid.Column="0" Grid.Row="1"/>
-                
-                <Label
-                    Text="1" 
-                    TextColor="Black"
-                    FontSize="Large"
-                    HorizontalTextAlignment="Center"               
-                    Grid.Row="1" 
-                    Grid.Column="0"/>
-
-                <Button
-                       Text="━━"
-                        FontSize="Large"
-                        TextColor="#FFDD00"
-                        BackgroundColor="#EAEDED"
-                        CornerRadius="15"
-                        Grid.Row="2"
-                       Grid.Column="0">
+                <Label HorizontalOptions="CenterAndExpand" 
+                       VerticalOptions="CenterAndExpand"
+                       Grid.Row="1"
+                       Grid.Column="0" 
+                       FontSize="Large"
+                       Text="9">
+                </Label>
+                <Button Grid.Row="2" 
+                            Text="-"
+                            FontSize="Large"
+                            Grid.Column="0" 
+                            Command="{Binding Path=BtnTappedCommand}"
+                            CommandParameter="0">
                 </Button>
-
             </Grid>
 
-            <Grid IsVisible="{Binding IsVisibleDigito}">
+            <Button
+            Text="＋"
+            FontSize="Large"
+            TextColor="#FFDD00"
+            BackgroundColor="#EAEDED"
+            HorizontalOptions="CenterAndExpand"
+            VerticalOptions="Center" 
+            CornerRadius="15"
+            Grid.Column="2" 
+            Grid.Row="2">
+            </Button>
 
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
-                </Grid.RowDefinitions>
+            <Button
+            Text="＋"
+            FontSize="Large"
+            TextColor="#FFDD00"
+            BackgroundColor="#EAEDED"
+            HorizontalOptions="CenterAndExpand"
+            VerticalOptions="Center"
+            CornerRadius="15"
+            Grid.Column="3" 
+            Grid.Row="2">
+            </Button>
 
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                </Grid.ColumnDefinitions>
+            <Button
+            Text="＋"
+            FontSize="Large"
+            TextColor="#FFDD00"
+            BackgroundColor="#EAEDED"
+            HorizontalOptions="CenterAndExpand"
+            VerticalOptions="Center"
+            CornerRadius="15"
+            Grid.Column="4" 
+            Grid.Row="2">
+            </Button>
 
-                <Button
-                       Text="＋"
-                        FontSize="Large"
-                        TextColor="#FFDD00"
-                        BackgroundColor="#EAEDED"
-                        CornerRadius="15"
-                        Grid.Row="0"
-                       Grid.Column="0">
-                </Button>
+        <Button
+            Text="━━"
+            FontSize="Large"
+            TextColor="#FFDD00"
+            BackgroundColor="#EAEDED"
+            HorizontalOptions="CenterAndExpand"
+            VerticalOptions="Center"
+            CornerRadius="15"
+            Grid.Column="0" 
+            Grid.Row="4">
+            </Button>
 
-                <BoxView Color="#EAEDED" Grid.Column="0" Grid.Row="1"/>
-                
-                <Label
-                    Text="1" 
-                    TextColor="Black"
-                    FontSize="Large"
-                    HorizontalTextAlignment="Center"               
-                    Grid.Row="1" 
-                    Grid.Column="0"/>
+            <Button
+            Text="━━"
+            FontSize="Large"
+            TextColor="#FFDD00"
+            BackgroundColor="#EAEDED"
+            HorizontalOptions="CenterAndExpand"
+            VerticalOptions="Center"
+            CornerRadius="15"
+            Grid.Column="1" 
+            Grid.Row="4">
+            </Button>
 
-                <Button
-                       Text="━━"
-                        FontSize="Large"
-                        TextColor="#FFDD00"
-                        BackgroundColor="#EAEDED"
-                        CornerRadius="15"
-                        Grid.Row="2"
-                       Grid.Column="0">
-                </Button>
+            <Button
+            Text="━━"
+            FontSize="Large"
+            TextColor="#FFDD00"
+            BackgroundColor="#EAEDED"
+            HorizontalOptions="CenterAndExpand"
+            VerticalOptions="Center"
+            CornerRadius="15"
+            Grid.Column="2" 
+            Grid.Row="4">
+            </Button>
 
-            </Grid>
+            <Button
+            Text="━━"
+            FontSize="Large"
+            TextColor="#FFDD00"
+            BackgroundColor="#EAEDED"
+            HorizontalOptions="CenterAndExpand"
+            VerticalOptions="Center"
+            CornerRadius="15"
+            Grid.Column="3" 
+            Grid.Row="4">
+            </Button>
 
-        </StackLayout>
-        
-        <Button 
+            <Button
+            Text="━━"
+            FontSize="Large"
+            TextColor="#FFDD00"
+            BackgroundColor="#EAEDED"
+            HorizontalOptions="CenterAndExpand"
+            VerticalOptions="Center"
+            CornerRadius="15"
+            Grid.Column="4" 
+            Grid.Row="4">
+            </Button>
+
+            <Button 
                 Text="Додати" 
                 TextColor="Black"
+                Command="{Binding}"
                 BackgroundColor="#EAEDED"
                 CornerRadius="20"
-                WidthRequest="200"              
+                WidthRequest="200"
+                Grid.Row="5"
+                Grid.Column="0"
+                Grid.ColumnSpan="5"              
                 HorizontalOptions="Center"
-                VerticalOptions="Center"/>
+                VerticalOptions="Center">
+            </Button>
 
-        <Label 
+            <Label 
                Text="Попередні показники:"
-               TextColor="Gray"
-               VerticalOptions="CenterAndExpand"
-               HorizontalOptions="CenterAndExpand" 
-               FontSize="Large" />
+               HorizontalTextAlignment="Center"
+               TextColor="Gray" 
+               FontSize="Medium"
+               Grid.Row="6"
+               Grid.Column="0"
+               Grid.ColumnSpan="5"              
+               HorizontalOptions="CenterAndExpand"
+               VerticalOptions="Center"/>
 
-        <DatePicker 
+
+        <DatePicker
                     MinimumDate="01/01/2019"
                     MaximumDate="01/01/2050"
-                    Date="08/09/2019"
+                    Date="07/08/2019"
                     TextColor="Gray"
-                    FontSize="Medium"
                     HorizontalOptions="Center"
-                    VerticalOptions="Center"/>
+                    VerticalOptions="Center"
+                    Grid.Column="0" 
+                    Grid.Row="7"
+                    Grid.ColumnSpan="5"/>
 
+        <BoxView Color="Black" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="5" />
+        <!--<BoxView Color="Blue" Grid.Column="0" Grid.Row="1" />
+        <BoxView Color="Fuchsia" Grid.Column="0" Grid.Row="2" />--><!--
+        <BoxView Color="#EAEDED" Grid.Column="0" Grid.Row="3" CornerRadius="50" />
+        --><!--<BoxView Color="Blue" Grid.Column="0" Grid.Row="4" />
+        <BoxView Color="Fuchsia" Grid.Column="0" Grid.Row="5" />-->
+        <!--<BoxView Color="Red" Grid.Column="0" Grid.Row="6" />-->
+        <!--<BoxView Color="Blue" Grid.Column="0" Grid.Row="7" />-->
+        <BoxView Color="Black" Grid.Column="0" Grid.Row="8" Grid.ColumnSpan="5"/>
+
+        <!--<BoxView Color="Red" Grid.Column="1" Grid.Row="0" />
+        <BoxView Color="Blue" Grid.Column="1" Grid.Row="1" />
+        <BoxView Color="Fuchsia" Grid.Column="1" Grid.Row="2" />--><!--
+        <BoxView Color="#EAEDED" Grid.Column="1" Grid.Row="3" CornerRadius="50" />
+        --><!--<BoxView Color="Blue" Grid.Column="1" Grid.Row="4" />
+        <BoxView Color="Fuchsia" Grid.Column="1" Grid.Row="5" />
+        <BoxView Color="Red" Grid.Column="1" Grid.Row="6" />
+        <BoxView Color="Blue" Grid.Column="1" Grid.Row="7" />
+        <BoxView Color="#FFDD00" Grid.Column="1" Grid.Row="8" />
+
+        <BoxView Color="Red" Grid.Column="2" Grid.Row="0" />
+        <BoxView Color="Blue" Grid.Column="2" Grid.Row="1" />
+        <BoxView Color="Fuchsia" Grid.Column="2" Grid.Row="2" />--><!--
+        <BoxView Color="#EAEDED" Grid.Column="2" Grid.Row="3" CornerRadius="50" />
+        --><!--<BoxView Color="Blue" Grid.Column="2" Grid.Row="4" />
+        <BoxView Color="Fuchsia" Grid.Column="2" Grid.Row="5" />
+        <BoxView Color="Red" Grid.Column="2" Grid.Row="6" />
+        <BoxView Color="Blue" Grid.Column="2" Grid.Row="7" />
+        <BoxView Color="#FFDD00" Grid.Column="2" Grid.Row="8" />
+
+        <BoxView Color="Red" Grid.Column="3" Grid.Row="0" />
+        <BoxView Color="Blue" Grid.Column="3" Grid.Row="1" />
+        <BoxView Color="Fuchsia" Grid.Column="3" Grid.Row="2" />-->
+        <!--<BoxView Color="#EAEDED" Grid.Column="3" Grid.Row="3" CornerRadius="50" />-->
+        <!--<BoxView Color="Blue" Grid.Column="3" Grid.Row="4" />
+        <BoxView Color="Fuchsia" Grid.Column="3" Grid.Row="5" />
+        <BoxView Color="Red" Grid.Column="3" Grid.Row="6" />
+        <BoxView Color="Blue" Grid.Column="3" Grid.Row="7" />
+        <BoxView Color="#FFDD00" Grid.Column="3" Grid.Row="8" />-->
+
+        <!--<BoxView Color="Red" Grid.Column="4" Grid.Row="0" />
+        <BoxView Color="Blue" Grid.Column="4" Grid.Row="1" />
+        <BoxView Color="Fuchsia" Grid.Column="4" Grid.Row="2" />--><!--
+        <BoxView Color="#EAEDED" Grid.Column="4" Grid.Row="3" CornerRadius="50" />
+        --><!--<BoxView Color="Blue" Grid.Column="4" Grid.Row="4" />
+        <BoxView Color="Fuchsia" Grid.Column="4" Grid.Row="5" />
+        <BoxView Color="Red" Grid.Column="4" Grid.Row="6" />
+        <BoxView Color="Blue" Grid.Column="4" Grid.Row="7" />
+        <BoxView Color="#FFDD00" Grid.Column="4" Grid.Row="8" />-->
+
+    </Grid>
+
+        </StackLayout>
+        <Button Text="enter"></Button>
     </StackLayout>
-
-
-
 </ContentPage>

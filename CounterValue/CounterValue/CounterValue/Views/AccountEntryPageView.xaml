@@ -54,8 +54,7 @@
                Placeholder="00000"
                Keyboard="Numeric"
                VerticalOptions="CenterAndExpand"               
-               HorizontalOptions="Start"
-               Completed="Entry_Completed">
+               HorizontalOptions="Start">
 
                 </Entry>
 
@@ -74,8 +73,7 @@
                Placeholder="00000000"
                Keyboard="Numeric"
                VerticalOptions="CenterAndExpand"               
-               HorizontalOptions="End"
-               Completed="Entry_Completed">
+               HorizontalOptions="End">
                 </Entry>
 
             </StackLayout>
