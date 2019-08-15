@@ -11,6 +11,7 @@
         <Label BackgroundColor="Aqua" Text="{Binding Lic}"></Label>
         <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
 
+            
             <Grid IsVisible="{Binding IsVisibleDigit9}">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*"/>

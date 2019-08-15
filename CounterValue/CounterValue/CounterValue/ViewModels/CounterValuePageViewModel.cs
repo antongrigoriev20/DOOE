@@ -11,7 +11,8 @@ using Xamarin.Forms;
 namespace CounterValue.ViewModels
 {
     class CounterValuePageViewModel
-    {      
+    {  
+        
         public CounterValuePageViewModel()
         {
             //получаем из памяти устройства строку с данными пользователя
