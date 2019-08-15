@@ -8,136 +8,530 @@
 
 
     <StackLayout VerticalOptions="CenterAndExpand">
-        <Label BackgroundColor="Aqua" Text="{Binding Lic}"></Label>
+        
+        <Label BackgroundColor="Black"  Text="{Binding Lic}"></Label>
+        
         <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
 
-            
+
             <Grid IsVisible="{Binding IsVisibleDigit9}">
+                
                 <Grid.RowDefinitions>
+                    
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>
+                    
                 </Grid.RowDefinitions>
+                
                 <Grid.ColumnDefinitions>
+                    
                     <ColumnDefinition Width="*"></ColumnDefinition>
+                    
                 </Grid.ColumnDefinitions>
-                <Button Grid.Row="0" 
-                            Text="+" 
+                
+                <Button     
+                    
+                            Grid.Row="0"
+                            Text="＋"
                             FontSize="Large"
+                            TextColor="#FFDD00"
+                            BackgroundColor="#EAEDED"
+                            CornerRadius="15"
                             Grid.Column="0" 
                             Command="{Binding Path=BtnTappedCommand}"
                             CommandParameter="0">
                 </Button>
-                <Label HorizontalOptions="CenterAndExpand" 
+                
+                <Label 
+                    
+                       HorizontalOptions="CenterAndExpand" 
                        VerticalOptions="CenterAndExpand"
                        Grid.Row="1"
                        Grid.Column="0" 
                        FontSize="Large"
                        Text="9">
+                    
                 </Label>
-                <Button Grid.Row="2" 
-                            Text="-"
+                
+                <Button 
+                            
+                            Grid.Row="2" 
+                            Text="━━"
                             FontSize="Large"
+                            TextColor="#FFDD00"
+                            BackgroundColor="#EAEDED"
+                            CornerRadius="15"
                             Grid.Column="0" 
                             Command="{Binding Path=BtnTappedCommand}"
                             CommandParameter="0">
                 </Button>
+                
             </Grid>
 
             <Grid IsVisible="{Binding IsVisibleDigit8}">
+                
                 <Grid.RowDefinitions>
+                    
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>
+                    
                 </Grid.RowDefinitions>
+                
                 <Grid.ColumnDefinitions>
+                    
                     <ColumnDefinition Width="*"></ColumnDefinition>
+                                       
                 </Grid.ColumnDefinitions>
-                <Button Grid.Row="0" 
-                            Text="+" 
+                
+                <Button 
+                    
+                            Grid.Row="0" 
+                            Text="＋"
                             FontSize="Large"
+                            TextColor="#FFDD00"
+                            BackgroundColor="#EAEDED"
+                            CornerRadius="15"
                             Grid.Column="0" 
                             Command="{Binding Path=BtnTappedCommand}"
                             CommandParameter="0">
+                    
                 </Button>
-                <Label HorizontalOptions="CenterAndExpand" 
+                
+                <Label 
+                    
+                       HorizontalOptions="CenterAndExpand" 
                        VerticalOptions="CenterAndExpand"
                        Grid.Row="1"
                        Grid.Column="0" 
                        FontSize="Large"
                        Text="9">
+                    
                 </Label>
-                <Button Grid.Row="2" 
-                            Text="-"
+                
+                <Button 
+                    
+                            Grid.Row="2"
+                            Text="━━"
                             FontSize="Large"
+                            TextColor="#FFDD00"
+                            BackgroundColor="#EAEDED"
+                            CornerRadius="15"
                             Grid.Column="0" 
                             Command="{Binding Path=BtnTappedCommand}"
                             CommandParameter="0">
+                    
                 </Button>
+                
             </Grid>
 
             <Grid IsVisible="{Binding IsVisibleDigit7}">
+                
                 <Grid.RowDefinitions>
+                    
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>
+                    
                 </Grid.RowDefinitions>
+                
                 <Grid.ColumnDefinitions>
+                    
                     <ColumnDefinition Width="*"></ColumnDefinition>
+                    
                 </Grid.ColumnDefinitions>
-                <Button Grid.Row="0" 
-                            Text="+" 
+                
+                <Button 
+                            Grid.Row="0" 
+                            Text="＋"
                             FontSize="Large"
+                            TextColor="#FFDD00"
+                            BackgroundColor="#EAEDED"
+                            CornerRadius="15"
                             Grid.Column="0" 
                             Command="{Binding Path=BtnTappedCommand}"
                             CommandParameter="0">
+                    
                 </Button>
-                <Label HorizontalOptions="CenterAndExpand" 
+                
+                <Label 
+                    
+                       HorizontalOptions="CenterAndExpand" 
                        VerticalOptions="CenterAndExpand"
                        Grid.Row="1"
                        Grid.Column="0" 
                        FontSize="Large"
                        Text="9">
+                    
                 </Label>
-                <Button Grid.Row="2" 
-                            Text="-"
+                
+                <Button 
+                            Grid.Row="2" 
+                            Text="━━"
                             FontSize="Large"
+                            TextColor="#FFDD00"
+                            BackgroundColor="#EAEDED"
+                            CornerRadius="15"
                             Grid.Column="0" 
                             Command="{Binding Path=BtnTappedCommand}"
                             CommandParameter="0">
                 </Button>
+                
             </Grid>
-
+            
             <Grid IsVisible="{Binding IsVisibleDigit6}">
+                
                 <Grid.RowDefinitions>
+                    
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>
+                    
                 </Grid.RowDefinitions>
+                
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"></ColumnDefinition>
+
+                    <ColumnDefinition Width="*"/>
+                    
                 </Grid.ColumnDefinitions>
-                <Button Grid.Row="0" 
-                            Text="+" 
+                
+                <Button 
+                            Grid.Row="0" 
+                            Text="＋"
                             FontSize="Large"
+                            TextColor="#FFDD00"
+                            BackgroundColor="#EAEDED"
+                            CornerRadius="15"
                             Grid.Column="0" 
                             Command="{Binding Path=BtnTappedCommand}"
                             CommandParameter="0">
+                    
                 </Button>
-                <Label HorizontalOptions="CenterAndExpand" 
+                
+                <Label 
+                    
+                       HorizontalOptions="CenterAndExpand" 
                        VerticalOptions="CenterAndExpand"
                        Grid.Row="1"
                        Grid.Column="0" 
                        FontSize="Large"
                        Text="9">
+                    
                 </Label>
-                <Button Grid.Row="2" 
-                            Text="-"
+                
+                <Button 
+                    
+                            Grid.Row="2" 
+                            Text="━━"
                             FontSize="Large"
+                            TextColor="#FFDD00"
+                            BackgroundColor="#EAEDED"
+                            CornerRadius="15"
                             Grid.Column="0" 
                             Command="{Binding Path=BtnTappedCommand}"
                             CommandParameter="0">
+                    
                 </Button>
+                
             </Grid>
 
+            <Grid IsVisible="{Binding IsVisibleDigit5}">
+                
+                <Grid.RowDefinitions>
+                    
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    
+                </Grid.RowDefinitions>
+                
+                <Grid.ColumnDefinitions>
+
+                    <ColumnDefinition Width="*"/>
+                    
+                </Grid.ColumnDefinitions>
+                
+                <Button 
+                            Grid.Row="0" 
+                            Text="＋"
+                            FontSize="Large"
+                            TextColor="#FFDD00"
+                            BackgroundColor="#EAEDED"
+                            CornerRadius="15"
+                            Grid.Column="0" 
+                            Command="{Binding Path=BtnTappedCommand}"
+                            CommandParameter="0">
+                    
+                </Button>
+                
+                <Label
+                    
+                       HorizontalOptions="CenterAndExpand" 
+                       VerticalOptions="CenterAndExpand"
+                       Grid.Row="1"
+                       Grid.Column="0" 
+                       FontSize="Large"
+                       Text="9">
+                    
+                </Label>
+                
+                <Button 
+                            Grid.Row="2" 
+                            Text="━━"
+                            FontSize="Large"
+                            TextColor="#FFDD00"
+                            BackgroundColor="#EAEDED"
+                            CornerRadius="15"
+                            Grid.Column="0" 
+                            Command="{Binding Path=BtnTappedCommand}"
+                            CommandParameter="0">
+                    
+                </Button>
+                
+            </Grid>
+
+            <Grid>
+                
+                <Grid.RowDefinitions>
+                    
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    
+                </Grid.RowDefinitions>
+                
+                <Grid.ColumnDefinitions>
+
+                    <ColumnDefinition Width="*"/>
+                    
+                </Grid.ColumnDefinitions>
+                
+                <Button 
+                    
+                            Grid.Row="0" 
+                            Text="＋"
+                            FontSize="Large"
+                            TextColor="#FFDD00"
+                            BackgroundColor="#EAEDED"
+                            CornerRadius="15"
+                            Grid.Column="0" 
+                            Command="{Binding Path=BtnTappedCommand}"
+                            CommandParameter="0">
+                    
+                </Button>
+                
+                <Label 
+                    
+                       HorizontalOptions="CenterAndExpand" 
+                       VerticalOptions="CenterAndExpand"
+                       Grid.Row="1"
+                       Grid.Column="0" 
+                       FontSize="Large"
+                       Text="9">
+                    
+                </Label>
+                
+                <Button 
+                    
+                            Grid.Row="2" 
+                            Text="━━"
+                            FontSize="Large"
+                            TextColor="#FFDD00"
+                            BackgroundColor="#EAEDED"
+                            CornerRadius="15"
+                            Grid.Column="0" 
+                            Command="{Binding Path=BtnTappedCommand}"
+                            CommandParameter="0">
+                    
+                </Button>
+                
+            </Grid>
+
+            <Grid>
+                
+                <Grid.RowDefinitions>
+                    
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    
+                </Grid.RowDefinitions>
+                
+                <Grid.ColumnDefinitions>
+
+                    <ColumnDefinition Width="*"/>
+                    
+                </Grid.ColumnDefinitions>
+                
+                <Button 
+                    
+                            Grid.Row="0" 
+                            Text="＋"
+                            FontSize="Large"
+                            TextColor="#FFDD00"
+                            BackgroundColor="#EAEDED"
+                            CornerRadius="15"
+                            Grid.Column="0" 
+                            Command="{Binding Path=BtnTappedCommand}"
+                            CommandParameter="0">
+                    
+                </Button>
+                
+                <Label 
+                    
+                       HorizontalOptions="CenterAndExpand" 
+                       VerticalOptions="CenterAndExpand"
+                       Grid.Row="1"
+                       Grid.Column="0" 
+                       FontSize="Large"
+                       Text="9">
+                    
+                </Label>
+                
+                <Button 
+                            Grid.Row="2" 
+                            Text="━━"
+                            FontSize="Large"
+                            TextColor="#FFDD00"
+                            BackgroundColor="#EAEDED"
+                            CornerRadius="15"
+                            Grid.Column="0" 
+                            Command="{Binding Path=BtnTappedCommand}"
+                            CommandParameter="0">
+                    
+                </Button>
+                
+            </Grid>
+
+            <Grid>
+                
+                <Grid.RowDefinitions>
+                    
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    
+                </Grid.RowDefinitions>
+                
+                <Grid.ColumnDefinitions>
+
+                    <ColumnDefinition Width="*"/>
+                    
+                </Grid.ColumnDefinitions>
+                
+                <Button 
+                    
+                            Grid.Row="0" 
+                            Text="＋"   
+                            FontSize="Large"
+                            TextColor="#FFDD00"
+                            BackgroundColor="#EAEDED"
+                            CornerRadius="15"
+                            Grid.Column="0" 
+                            Command="{Binding Path=BtnTappedCommand}"
+                            CommandParameter="0">
+                    
+                </Button>
+                
+                <Label 
+                    
+                       HorizontalOptions="CenterAndExpand" 
+                       VerticalOptions="CenterAndExpand"
+                       Grid.Row="1"
+                       Grid.Column="0" 
+                       FontSize="Large"
+                       Text="9">
+                    
+                </Label>
+                
+                <Button 
+                    
+                            Grid.Row="2" 
+                            Text="━━"
+                            FontSize="Large"
+                            TextColor="#FFDD00"
+                            BackgroundColor="#EAEDED"
+                            CornerRadius="15"
+                            Grid.Column="0" 
+                            Command="{Binding Path=BtnTappedCommand}"
+                            CommandParameter="0">
+                    
+                </Button>
+                
+            </Grid>
+
+            <Grid>
+                
+                <Grid.RowDefinitions>
+                    
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    
+                </Grid.RowDefinitions>
+                
+                <Grid.ColumnDefinitions>
+
+                    <ColumnDefinition Width="*"/>
+                    
+                </Grid.ColumnDefinitions>
+                
+                <Button 
+                    
+                            Grid.Row="0" 
+                            Text="＋"
+                            FontSize="Large"
+                            TextColor="#FFDD00"
+                            BackgroundColor="#EAEDED"
+                            CornerRadius="15"
+                            Grid.Column="0" 
+                            Command="{Binding Path=BtnTappedCommand}"
+                            CommandParameter="0">
+                    
+                </Button>
+                
+                <Label 
+                    
+                       HorizontalOptions="CenterAndExpand" 
+                       VerticalOptions="CenterAndExpand"
+                       Grid.Row="1"
+                       Grid.Column="0" 
+                       FontSize="Large"
+                       Text="9">
+                    
+                </Label>
+                
+                <Button 
+                    
+                            Grid.Row="2" 
+                            Text="━━"
+                            FontSize="Large"
+                            TextColor="#FFDD00"
+                            BackgroundColor="#EAEDED"
+                            CornerRadius="15"
+                            Grid.Column="0" 
+                            Command="{Binding Path=BtnTappedCommand}"
+                            CommandParameter="0">
+                    
+                </Button>
+                
+            </Grid>
+
+        </StackLayout>
+        
+        <Button 
+                      
+                Text="Додати" 
+                TextColor="Black"
+                BackgroundColor="#EAEDED"
+                CornerRadius="20"
+                WidthRequest="200"              
+                HorizontalOptions="Center"
+                VerticalOptions="Center">
+            
+        </Button>
+        
+    </StackLayout>
+    
 </ContentPage>
