@@ -16,6 +16,15 @@
 
         </Label>
 
+        <DatePicker 
+                    MinimumDate="01/01/2019"
+                    MaximumDate="01/01/2050"
+                    Date="08/09/2019"
+                    TextColor="Gray"
+                    FontSize="Medium"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"/>
+
         <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
 
 
@@ -512,7 +521,24 @@
                 VerticalOptions="Center">
             
         </Button>
-        
+
+        <Label 
+               Text="Попередні показники:"
+               TextColor="Gray"
+               VerticalOptions="CenterAndExpand"
+               HorizontalOptions="CenterAndExpand"
+               HorizontalTextAlignment="Center"
+               FontSize="Medium" />
+
+        <DatePicker 
+                    MinimumDate="01/01/2019"
+                    MaximumDate="01/01/2050"
+                    Date="08/09/2019"
+                    TextColor="Gray"
+                    FontSize="Medium"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"/>
+
     </StackLayout>
     
 </ContentPage>
