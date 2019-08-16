@@ -8,9 +8,14 @@
 
 
     <StackLayout VerticalOptions="CenterAndExpand">
-        
-        <Label BackgroundColor="Black"  Text="{Binding Lic}"></Label>
-        
+
+        <Label 
+            HorizontalOptions="CenterAndExpand"
+            FontSize="Large"
+            Text="{Binding Lic}">
+
+        </Label>
+
         <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
 
 
@@ -50,14 +55,13 @@
                        Grid.Row="1"
                        Grid.Column="0" 
                        FontSize="Large"
-                       Text="9">
-                    
+                       Text="{Binding Digit9}">
                 </Label>
                 
                 <Button 
                             
                             Grid.Row="2" 
-                            Text="━━"
+                            Text="━"
                             FontSize="Large"
                             TextColor="#FFDD00"
                             BackgroundColor="#EAEDED"
@@ -106,14 +110,13 @@
                        Grid.Row="1"
                        Grid.Column="0" 
                        FontSize="Large"
-                       Text="9">
-                    
+                       Text="{Binding Digit8}">
                 </Label>
                 
                 <Button 
                     
                             Grid.Row="2"
-                            Text="━━"
+                            Text="━"
                             FontSize="Large"
                             TextColor="#FFDD00"
                             BackgroundColor="#EAEDED"
@@ -162,13 +165,12 @@
                        Grid.Row="1"
                        Grid.Column="0" 
                        FontSize="Large"
-                       Text="9">
-                    
+                       Text="{Binding Digit7}">
                 </Label>
                 
                 <Button 
                             Grid.Row="2" 
-                            Text="━━"
+                            Text="━"
                             FontSize="Large"
                             TextColor="#FFDD00"
                             BackgroundColor="#EAEDED"
@@ -216,14 +218,13 @@
                        Grid.Row="1"
                        Grid.Column="0" 
                        FontSize="Large"
-                       Text="9">
-                    
+                       Text="{Binding Digit6}">
                 </Label>
                 
                 <Button 
                     
                             Grid.Row="2" 
-                            Text="━━"
+                            Text="━"
                             FontSize="Large"
                             TextColor="#FFDD00"
                             BackgroundColor="#EAEDED"
@@ -272,13 +273,68 @@
                        Grid.Row="1"
                        Grid.Column="0" 
                        FontSize="Large"
-                       Text="9">
-                    
+                       Text="{Binding Digit5}">
                 </Label>
                 
                 <Button 
                             Grid.Row="2" 
-                            Text="━━"
+                            Text="━"
+                            FontSize="Large"
+                            TextColor="#FFDD00"
+                            BackgroundColor="#EAEDED"
+                            CornerRadius="15"
+                            Grid.Column="0" 
+                            Command="{Binding Path=BtnTappedCommand}"
+                            CommandParameter="0">
+                    
+                </Button>
+                
+            </Grid>
+
+            <Grid>
+                
+                <Grid.RowDefinitions>
+                    
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    
+                </Grid.RowDefinitions>
+                
+                <Grid.ColumnDefinitions>
+
+                    <ColumnDefinition Width="*"/>
+                    
+                </Grid.ColumnDefinitions>
+                
+                <Button 
+                    
+                            Grid.Row="0" 
+                            Text="＋"
+                            FontSize="Large"
+                            TextColor="#FFDD00"
+                            BackgroundColor="#EAEDED"
+                            CornerRadius="15"
+                            Grid.Column="0" 
+                            Command="{Binding Path=BtnTappedCommand}"
+                            CommandParameter="0">
+                    
+                </Button>
+                
+                <Label 
+                        
+                       HorizontalOptions="CenterAndExpand" 
+                       VerticalOptions="CenterAndExpand"
+                       Grid.Row="1"
+                       Grid.Column="0" 
+                       FontSize="Large"
+                       Text="{Binding Digit4}">
+                </Label>
+                
+                <Button                     
+         
+                        Grid.Row="2" 
+                            Text="━"
                             FontSize="Large"
                             TextColor="#FFDD00"
                             BackgroundColor="#EAEDED"
@@ -328,70 +384,12 @@
                        Grid.Row="1"
                        Grid.Column="0" 
                        FontSize="Large"
-                       Text="9">
-                    
-                </Label>
-                
-                <Button 
-                    
-                            Grid.Row="2" 
-                            Text="━━"
-                            FontSize="Large"
-                            TextColor="#FFDD00"
-                            BackgroundColor="#EAEDED"
-                            CornerRadius="15"
-                            Grid.Column="0" 
-                            Command="{Binding Path=BtnTappedCommand}"
-                            CommandParameter="0">
-                    
-                </Button>
-                
-            </Grid>
-
-            <Grid>
-                
-                <Grid.RowDefinitions>
-                    
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
-                    
-                </Grid.RowDefinitions>
-                
-                <Grid.ColumnDefinitions>
-
-                    <ColumnDefinition Width="*"/>
-                    
-                </Grid.ColumnDefinitions>
-                
-                <Button 
-                    
-                            Grid.Row="0" 
-                            Text="＋"
-                            FontSize="Large"
-                            TextColor="#FFDD00"
-                            BackgroundColor="#EAEDED"
-                            CornerRadius="15"
-                            Grid.Column="0" 
-                            Command="{Binding Path=BtnTappedCommand}"
-                            CommandParameter="0">
-                    
-                </Button>
-                
-                <Label 
-                    
-                       HorizontalOptions="CenterAndExpand" 
-                       VerticalOptions="CenterAndExpand"
-                       Grid.Row="1"
-                       Grid.Column="0" 
-                       FontSize="Large"
-                       Text="9">
-                    
+                       Text="{Binding Digit3}">
                 </Label>
                 
                 <Button 
                             Grid.Row="2" 
-                            Text="━━"
+                            Text="━"
                             FontSize="Large"
                             TextColor="#FFDD00"
                             BackgroundColor="#EAEDED"
@@ -441,14 +439,13 @@
                        Grid.Row="1"
                        Grid.Column="0" 
                        FontSize="Large"
-                       Text="9">
-                    
+                       Text="{Binding Digit2}">
                 </Label>
                 
                 <Button 
                     
                             Grid.Row="2" 
-                            Text="━━"
+                            Text="━"
                             FontSize="Large"
                             TextColor="#FFDD00"
                             BackgroundColor="#EAEDED"
@@ -498,14 +495,13 @@
                        Grid.Row="1"
                        Grid.Column="0" 
                        FontSize="Large"
-                       Text="9">
-                    
+                       Text="{Binding Digit1}">
                 </Label>
                 
                 <Button 
                     
                             Grid.Row="2" 
-                            Text="━━"
+                            Text="━"
                             FontSize="Large"
                             TextColor="#FFDD00"
                             BackgroundColor="#EAEDED"
