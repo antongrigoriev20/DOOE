@@ -26,7 +26,7 @@
                             FontSize="Large"
                             Grid.Column="0" 
                             Command="{Binding Path=BtnTappedCommand}"
-                            CommandParameter="0">
+                            CommandParameter="9Up">
                 </Button>
                 <Label HorizontalOptions="CenterAndExpand" 
                        VerticalOptions="CenterAndExpand"
@@ -40,7 +40,7 @@
                             FontSize="Large"
                             Grid.Column="0" 
                             Command="{Binding Path=BtnTappedCommand}"
-                            CommandParameter="0">
+                            CommandParameter="9Down">
                 </Button>
             </Grid>
 
@@ -58,7 +58,7 @@
                             FontSize="Large"
                             Grid.Column="0" 
                             Command="{Binding Path=BtnTappedCommand}"
-                            CommandParameter="0">
+                            CommandParameter="8Up">
                 </Button>
                 <Label HorizontalOptions="CenterAndExpand" 
                        VerticalOptions="CenterAndExpand"
@@ -72,7 +72,7 @@
                             FontSize="Large"
                             Grid.Column="0" 
                             Command="{Binding Path=BtnTappedCommand}"
-                            CommandParameter="0">
+                            CommandParameter="8Down">
                 </Button>
             </Grid>
 
@@ -90,7 +90,7 @@
                             FontSize="Large"
                             Grid.Column="0" 
                             Command="{Binding Path=BtnTappedCommand}"
-                            CommandParameter="0">
+                            CommandParameter="7Up">
                 </Button>
                 <Label HorizontalOptions="CenterAndExpand" 
                        VerticalOptions="CenterAndExpand"
@@ -104,7 +104,7 @@
                             FontSize="Large"
                             Grid.Column="0" 
                             Command="{Binding Path=BtnTappedCommand}"
-                            CommandParameter="0">
+                            CommandParameter="7Down">
                 </Button>
             </Grid>
 
@@ -122,7 +122,7 @@
                             FontSize="Large"
                             Grid.Column="0" 
                             Command="{Binding Path=BtnTappedCommand}"
-                            CommandParameter="0">
+                            CommandParameter="6Up">
                 </Button>
                 <Label HorizontalOptions="CenterAndExpand" 
                        VerticalOptions="CenterAndExpand"
@@ -136,7 +136,7 @@
                             FontSize="Large"
                             Grid.Column="0" 
                             Command="{Binding Path=BtnTappedCommand}"
-                            CommandParameter="0">
+                            CommandParameter="6Down">
                 </Button>
             </Grid>
 
@@ -154,7 +154,7 @@
                             FontSize="Large"
                             Grid.Column="0" 
                             Command="{Binding Path=BtnTappedCommand}"
-                            CommandParameter="0">
+                            CommandParameter="5Up">
                 </Button>
                 <Label HorizontalOptions="CenterAndExpand" 
                        VerticalOptions="CenterAndExpand"
@@ -168,7 +168,7 @@
                             FontSize="Large"
                             Grid.Column="0" 
                             Command="{Binding Path=BtnTappedCommand}"
-                            CommandParameter="0">
+                            CommandParameter="5Down">
                 </Button>
             </Grid>
 
@@ -186,7 +186,7 @@
                             FontSize="Large"
                             Grid.Column="0" 
                             Command="{Binding Path=BtnTappedCommand}"
-                            CommandParameter="0">
+                            CommandParameter="4Up">
                 </Button>
                 <Label HorizontalOptions="CenterAndExpand" 
                        VerticalOptions="CenterAndExpand"
@@ -200,7 +200,7 @@
                             FontSize="Large"
                             Grid.Column="0" 
                             Command="{Binding Path=BtnTappedCommand}"
-                            CommandParameter="0">
+                            CommandParameter="4Down">
                 </Button>
             </Grid>
 
@@ -218,7 +218,7 @@
                             FontSize="Large"
                             Grid.Column="0" 
                             Command="{Binding Path=BtnTappedCommand}"
-                            CommandParameter="0">
+                            CommandParameter="3Up">
                 </Button>
                 <Label HorizontalOptions="CenterAndExpand" 
                        VerticalOptions="CenterAndExpand"
@@ -232,7 +232,7 @@
                             FontSize="Large"
                             Grid.Column="0" 
                             Command="{Binding Path=BtnTappedCommand}"
-                            CommandParameter="0">
+                            CommandParameter="3Down">
                 </Button>
             </Grid>
 
@@ -250,7 +250,7 @@
                             FontSize="Large"
                             Grid.Column="0" 
                             Command="{Binding Path=BtnTappedCommand}"
-                            CommandParameter="0">
+                            CommandParameter="2Up">
                 </Button>
                 <Label HorizontalOptions="CenterAndExpand" 
                        VerticalOptions="CenterAndExpand"
@@ -264,7 +264,7 @@
                             FontSize="Large"
                             Grid.Column="0" 
                             Command="{Binding Path=BtnTappedCommand}"
-                            CommandParameter="0">
+                            CommandParameter="2Down">
                 </Button>
             </Grid>
 
@@ -282,7 +282,7 @@
                             FontSize="Large"
                             Grid.Column="0" 
                             Command="{Binding Path=BtnTappedCommand}"
-                            CommandParameter="0">
+                            CommandParameter="1Up">
                 </Button>
                 <Label HorizontalOptions="CenterAndExpand" 
                        VerticalOptions="CenterAndExpand"
@@ -296,7 +296,7 @@
                             FontSize="Large"
                             Grid.Column="0" 
                             Command="{Binding Path=BtnTappedCommand}"
-                            CommandParameter="0">
+                            CommandParameter="1Down">
                 </Button>
             </Grid>
 

@@ -75,7 +75,7 @@ namespace CounterValue.ViewModels
                         IsVisibleDigit9 = true;
                         break;
                 }
-                Digit1 = 1;
+                Digit1 = 0;
                 Digit2 = 0;
                 Digit3 = 0;
                 Digit4 = 0;
@@ -103,6 +103,94 @@ namespace CounterValue.ViewModels
                         Digit9 = int.Parse(tempValue[0].ToString());
                     }
                 }
+
+                BtnTappedCommand = new Command<string>(BtnTapped);
+            }
+        }
+
+        /// <summary>
+        /// Увеличивет значение цифры на кнопке на единицу(если 9 то сбрасывает на 0)
+        /// </summary>
+        /// <param name="param"></param>
+        /// <returns></returns>
+        public int DigitIncrement(int param)
+        {
+            if (param == 9)
+                param = 0;
+            else param++;
+            return param;
+        }
+
+        /// <summary>
+        /// Уменьшает значение цифры на кнопке на единицу(если 0 то сбрасывает на 9)
+        /// </summary>
+        /// <param name="param"></param>
+        /// <returns></returns>
+        public int DigitDecrement(int param)
+        {
+            if (param == 0)
+                param = 9;
+            else param--;
+            return param;
+        }
+        private void BtnTapped(string param)
+        {
+            switch (param)
+            {
+                case "1Up":
+                    Digit1 = DigitIncrement(Digit1);
+                    break;
+                case "2Up":
+                    Digit2 = DigitIncrement(Digit2);
+                    break;
+                case "3Up":
+                    Digit3 = DigitIncrement(Digit3);
+                    break;
+                case "4Up":
+                    Digit4 = DigitIncrement(Digit4);
+                    break;
+                case "5Up":
+                    Digit5 = DigitIncrement(Digit5);
+                    break;
+                case "6Up":
+                    Digit6 = DigitIncrement(Digit6);
+                    break;
+                case "7Up":
+                    Digit7 = DigitIncrement(Digit7);
+                    break;
+                case "8Up":
+                    Digit8 = DigitIncrement(Digit8);
+                    break;
+                case "9Up":
+                    Digit9 = DigitIncrement(Digit9);
+                    break;
+                case "1Down":
+                    Digit1 = DigitDecrement(Digit1);
+                    break;
+                case "2Down":
+                    Digit2 = DigitDecrement(Digit2);
+                    break;
+                case "3Down":
+                    Digit3 = DigitDecrement(Digit3);
+                    break;
+                case "4Down":
+                    Digit4 = DigitDecrement(Digit4);
+                    break;
+                case "5Down":
+                    Digit5 = DigitDecrement(Digit5);
+                    break;
+                case "6Down":
+                    Digit6 = DigitDecrement(Digit6);
+                    break;
+                case "7Down":
+                    Digit7 = DigitDecrement(Digit7);
+                    break;
+                case "8Down":
+                    Digit8 = DigitDecrement(Digit8);
+                    break;
+                case "9Down":
+                    Digit9 = DigitDecrement(Digit9);
+                    break;
             }
         }
 
@@ -243,6 +331,8 @@ namespace CounterValue.ViewModels
 
         private ICommand _sendIndicators;
 
+        public ICommand BtnTappedCommand { get; set; }
+        
         public ICommand SendIndicators => _sendIndicators ?? (_sendIndicators = new Command(async () =>
         {
             string s = CounterValue;
