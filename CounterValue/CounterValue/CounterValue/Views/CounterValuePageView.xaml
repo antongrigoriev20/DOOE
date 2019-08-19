@@ -522,7 +522,7 @@
             
         </Button>
 
-        <Label 
+        <!--<Label 
                Text="Попередні показники:"
                TextColor="Gray"
                VerticalOptions="CenterAndExpand"
@@ -537,7 +537,7 @@
                     TextColor="Gray"
                     FontSize="Medium"
                     HorizontalOptions="Center"
-                    VerticalOptions="Center"/>
+                    VerticalOptions="Center"/>-->
 
     </StackLayout>
     
