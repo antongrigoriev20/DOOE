@@ -9,6 +9,7 @@ namespace CounterValue.Models
     {
         public SelectIndicatorsResponse IndicatorsResponse { get; set; }
         public AbonentInfoResponse AbonentInfo { get; set; }
-
+        public string LastData { get; set; }
+        public string PenultimateData { get; set; } 
     }
 }

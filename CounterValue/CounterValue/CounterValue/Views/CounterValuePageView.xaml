@@ -19,7 +19,7 @@
         <DatePicker 
                     MinimumDate="01/01/2019"
                     MaximumDate="01/01/2050"
-                    Date="08/09/2019"
+                    Date="{Binding Date}"
                     TextColor="Gray"
                     FontSize="Medium"
                     HorizontalOptions="Center"
@@ -511,7 +511,7 @@
         </StackLayout>
         
         <Button 
-                      
+                Command="{Binding SendIndicators}"    
                 Text="Додати" 
                 TextColor="Black"
                 BackgroundColor="#EAEDED"
@@ -522,14 +522,21 @@
             
         </Button>
 
+<<<<<<< HEAD
         <!--<Label 
                Text="Попередні показники:"
+=======
+        <StackLayout Orientation="Vertical" IsVisible="{Binding LastDataVisible}">
+            <Label 
+               Text="Показники на:"
+>>>>>>> 72651753e0d428ceef0ac3d5741fc85a4ef9f8b0
                TextColor="Gray"
                VerticalOptions="CenterAndExpand"
                HorizontalOptions="CenterAndExpand"
                HorizontalTextAlignment="Center"
-               FontSize="Medium" />
+               FontSize="Small" />
 
+<<<<<<< HEAD
         <DatePicker 
                     MinimumDate="01/01/2019"
                     MaximumDate="01/01/2050"
@@ -538,6 +545,19 @@
                     FontSize="Medium"
                     HorizontalOptions="Center"
                     VerticalOptions="Center"/>-->
+=======
+            <Label Text="{Binding LastData}"
+                   FontSize="Medium"
+               VerticalOptions="CenterAndExpand"
+               HorizontalOptions="CenterAndExpand"
+               HorizontalTextAlignment="Center"></Label>
+            <Label Text="{Binding PenultimateData}"
+                   FontSize="Small"
+               VerticalOptions="CenterAndExpand"
+               HorizontalOptions="CenterAndExpand"
+               HorizontalTextAlignment="Center"></Label>
+        </StackLayout>
+>>>>>>> 72651753e0d428ceef0ac3d5741fc85a4ef9f8b0
 
     </StackLayout>
     
