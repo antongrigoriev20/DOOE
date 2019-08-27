@@ -6,6 +6,8 @@
              mc:Ignorable="d"
              x:Class="CounterValue.App">
     <Application.Resources>
-
+        <Style TargetType="NavigationPage">
+            <Setter Property="BarBackgroundColor" Value="#FFFFFF"/>
+        </Style>
     </Application.Resources>
 </Application>

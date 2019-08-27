@@ -227,12 +227,18 @@ namespace CounterValue.ViewModels
             {
                 //останавливаем прогрессбар и активируем кнопку
                 //StopProgressBarEnableButton();
-                await Application.Current.MainPage.DisplayAlert("Уведомление", $"Попередні показники вище", "ОK");
+                await Application.Current.MainPage.DisplayAlert("Уведомление", $"Попередні показники вище або рівні", "ОK");
                 return;
             }
             PenultimateData = LastData;
             LastData =$"{Date.Day}.{Date.Month}.{Date.Year} / {long.Parse(first)}";
             LastDataVisible = true;
+
+            User.IndicatorsResponse.response.value1 = long.Parse(first).ToString();
+            User.LastData = LastData;
+            User.PenultimateData = PenultimateData;
+            //записываем данные по лицевому в памяти устройсва
+            CrossSettings.Current.AddOrUpdateValue("lic", Newtonsoft.Json.JsonConvert.SerializeObject(User));
         }));
         #endregion
 
