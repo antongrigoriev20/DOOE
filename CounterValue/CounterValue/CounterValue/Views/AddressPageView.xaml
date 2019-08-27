@@ -3,13 +3,40 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:local="clr-namespace:CounterValue;assembly=CounterValue"
              mc:Ignorable="d"
              x:Class="CounterValue.Views.AddressPageView">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Address Page"
+            <!--<Button Text="Next page" Command="{Binding NextPageButtonCommand}"></Button>-->
+            <Label Text="{Binding Title}"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
+            <SearchBar x:Name="SearchBar" 
+               Placeholder="Назва селища (не менше 3 букв)" 
+               SearchCommand="{Binding SearchCommand}" 
+               SearchCommandParameter="{Binding Text, Source={x:Reference SearchBar}}"
+               Text="{Binding SearchText, Mode=TwoWay}">
+                <SearchBar.Behaviors>
+                    <local:TextChangedBehavior/>
+                </SearchBar.Behaviors>
+            </SearchBar>
+
+            <ListView ItemsSource="{Binding Cities}" HasUnevenRows="True">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Label Text="{Binding .}"></Label>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+            <ListView x:Name="ListViewItems"
+          ItemsSource="{Binding Recipes}"
+          IsPullToRefreshEnabled="True"
+          
+          SelectedItem="{Binding SelectedRecipe}"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
