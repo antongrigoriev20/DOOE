@@ -14,8 +14,9 @@ namespace CounterValue.ViewModels
 {
     class AddressPageViewModel : INotifyPropertyChanged
     {
-        public ObservableCollection<string> Cities { get; set; }
-        private Dictionary<string, Dictionary<string, string>> OdeskaOblData;
+        private Dictionary<string, Dictionary<string, string>> odeskaOblData;
+        private Dictionary<string, string> city;
+
         public event PropertyChangedEventHandler PropertyChanged;
         protected void OnPropertyChanged(string propName)
         {
@@ -37,37 +38,97 @@ namespace CounterValue.ViewModels
             }
         }
 
-        private string _searchText { get; set; }
-        public string SearchText
+        private ObservableCollection<string> cities;
+        public ObservableCollection<string> Cities //{ get; set; }
         {
-            get { return _searchText; }
+            get { return cities; }
             set
             {
-                if (_searchText != value)
+                if (cities != value)
                 {
-                    _searchText = value;
+                    cities = value;
+                    OnPropertyChanged("Cities");
                 }
-                OnPropertyChanged("SearchText");
             }
         }
 
-        private ICommand _nextPageButtonCommand;
-
-        public ICommand NextPageButtonCommand => _nextPageButtonCommand ?? (_nextPageButtonCommand = new Command(async () =>
+        private bool cityVisible;
+        public bool CityVisible
         {
-            await Application.Current.MainPage.Navigation.PushAsync(new CounterValuePageView());
+            get { return cityVisible; }
+            set
+            {
+                if (cityVisible != value)
+                {
+                    cityVisible = value;
+                    OnPropertyChanged("CityVisible");
+                }
+            }
+        }
+        private string searchCity { get; set; }
+        public string SearchCity
+        {
+            get
+            {
+                return searchCity;
+            }
+            set
+            {
+                if (searchCity != value)
+                {
+                    CityVisible = true;
+                    searchCity = value;
+                    SearchStreetVisible = false;
+                    SearchStreet = "";
+                }
+                OnPropertyChanged("SearchCity");
+            }
+        }
 
-        }));
+        //public string SelectedCity
+        //{
+        //    get { return searchCity; }
+        //    set
+        //    {
+        //        if (searchCity != value)
+        //        {
+        //            SearchCity = value;
+                    
+        //            odeskaOblData.TryGetValue(SearchCity, out city);
+        //            CityVisible = false;
+        //            SearchStreetVisible = true;
+        //            OnPropertyChanged("SelectedCity");//!!!
+        //        }
+        //    }
+        //}
+
+        public ICommand ItemCityClickCommand
+        {
+            get
+            {
+                return new Command((item) => 
+                {
+                    if (searchCity != item as string)
+                    {
+                        SearchCity = item as string;
+
+                        odeskaOblData.TryGetValue(SearchCity, out city);
+                        CityVisible = false;
+                        SearchStreetVisible = true;
+                    }
+                });
+            }
+        }
 
 
-        private ICommand _searchCommand;
+        private ICommand _searchCityCommand;
 
-        public ICommand SearchCommand => _searchCommand ?? (_searchCommand = new Command<string>((text) =>
+        public ICommand SearchCityCommand => _searchCityCommand ?? (_searchCityCommand = new Command<string>((text) =>
         {
             if (text.Length >= 3)
             {
                 Cities.Clear();
-                foreach (var city in OdeskaOblData)
+                foreach (var city in odeskaOblData)
                 {
                     if (city.Key.ToLower().Contains(text.ToLower()))
                         Cities.Add(city.Key);
@@ -91,14 +152,104 @@ namespace CounterValue.ViewModels
 
         }));
 
+        //--------------------------------
+       
+        public string SelectedStreet
+        {
+            set
+            {
+                if (searchStreet != value)
+                {
+                    SearchStreet = value;
+
+                    //city.TryGetValue(SearchStreet, out street);
+                    //var t = city;
+                    StreetVisible = false;
+                }
+            }
+        }
+        private string searchStreet { get; set; }
+        public string SearchStreet
+        {
+            get { return searchStreet; }
+            set
+            {
+                if (searchStreet != value)
+                {
+                    StreetVisible = true;
+                    searchStreet = value;
+                }
+                OnPropertyChanged("SearchStreet");
+            }
+        }
+
+        private bool searchStreetVisible;
+        public bool SearchStreetVisible
+        {
+            get { return searchStreetVisible; }
+            set
+            {
+                if (searchStreetVisible != value)
+                {
+                    searchStreetVisible = value;
+                    OnPropertyChanged("SearchStreetVisible");
+                }
+            }
+        }
+
+        private bool streetVisible;
+        public bool StreetVisible
+        {
+            get { return streetVisible; }
+            set
+            {
+                if (streetVisible != value)
+                {
+                    streetVisible = value;
+                    OnPropertyChanged("StreetVisible");
+                }
+            }
+        }
+
+        public ObservableCollection<string> Streets { get; set; }
+
+        private ICommand searchStreetCommand;
+
+        public ICommand SearchStreetCommand => searchStreetCommand ?? (searchStreetCommand = new Command<string>((text) =>
+        {
+            if (text.Length >= 3)
+            {
+                Streets.Clear();
+                foreach (var street in city)
+                {
+                    if (street.Key.ToLower().Contains(text.ToLower()))
+                        Streets.Add(street.Key);
+                }
+            }
+            else
+            {
+                Streets.Clear();
+            }
+
+        }));
+
+
+        private ICommand _nextPageButtonCommand;
+
+        public ICommand NextPageButtonCommand => _nextPageButtonCommand ?? (_nextPageButtonCommand = new Command(async () =>
+        {
+            await Application.Current.MainPage.Navigation.PushAsync(new CounterValuePageView());
+
+        }));
+
         public AddressPageViewModel()
         {
             title = "Введите адрес";
             Cities = new ObservableCollection<string>();
-            //Cities.Add("111");
-            //Cities.Add("222");
-            //Cities.Add("333");
-
+            Streets= new ObservableCollection<string>(); 
+            CityVisible = false;
+            StreetVisible = false;
+            SearchStreetVisible = false;
 
             var assembly = typeof(App).GetTypeInfo().Assembly;
             Stream stream = assembly.GetManifestResourceStream("CounterValue.OdeskaOblJson.txt");
@@ -106,7 +257,7 @@ namespace CounterValue.ViewModels
             using (var reader = new System.IO.StreamReader(stream))
             {
                 text = reader.ReadToEnd();
-                OdeskaOblData = JsonConvert.DeserializeObject<Dictionary<string, Dictionary<string, string>>>(text);
+                odeskaOblData = JsonConvert.DeserializeObject<Dictionary<string, Dictionary<string, string>>>(text);
             }
 
         }

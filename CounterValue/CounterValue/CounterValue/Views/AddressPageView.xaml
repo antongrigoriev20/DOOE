@@ -12,17 +12,32 @@
             <Label Text="{Binding Title}"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
-            <SearchBar x:Name="SearchBar" 
+            <SearchBar x:Name="SearchCityBar" 
                Placeholder="Назва селища (не менше 3 букв)" 
-               SearchCommand="{Binding SearchCommand}" 
-               SearchCommandParameter="{Binding Text, Source={x:Reference SearchBar}}"
-               Text="{Binding SearchText, Mode=TwoWay}">
+               SearchCommand="{Binding SearchCityCommand}" 
+               SearchCommandParameter="{Binding Text, Source={x:Reference SearchCityBar}}"
+               Text="{Binding SearchCity, Mode=TwoWay}">
                 <SearchBar.Behaviors>
                     <local:TextChangedBehavior/>
                 </SearchBar.Behaviors>
             </SearchBar>
 
-            <ListView ItemsSource="{Binding Cities}" HasUnevenRows="True">
+            <local:BetterListView IsVisible="{Binding CityVisible}"
+                      ItemsSource="{Binding Cities}" 
+                      ItemClickCommand="{Binding ItemCityClickCommand}"/>
+
+
+            <SearchBar x:Name="SearchStreetBar" IsVisible="{Binding SearchStreetVisible}"
+               Placeholder="Назва вулицi (не менше 3 букв)" 
+               SearchCommand="{Binding SearchStreetCommand}" 
+               SearchCommandParameter="{Binding Text, Source={x:Reference SearchStreetBar}}"
+               Text="{Binding SearchStreet, Mode=TwoWay}">
+                <SearchBar.Behaviors>
+                    <local:TextChangedBehavior/>
+                </SearchBar.Behaviors>
+            </SearchBar>
+
+            <ListView IsVisible="{Binding StreetVisible}" ItemsSource="{Binding Streets, Mode=TwoWay}" HasUnevenRows="True" SelectedItem="{Binding SelectedStreet}">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
