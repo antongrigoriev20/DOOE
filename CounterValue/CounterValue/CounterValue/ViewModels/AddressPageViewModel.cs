@@ -85,23 +85,6 @@ namespace CounterValue.ViewModels
             }
         }
 
-        //public string SelectedCity
-        //{
-        //    get { return searchCity; }
-        //    set
-        //    {
-        //        if (searchCity != value)
-        //        {
-        //            SearchCity = value;
-                    
-        //            odeskaOblData.TryGetValue(SearchCity, out city);
-        //            CityVisible = false;
-        //            SearchStreetVisible = true;
-        //            OnPropertyChanged("SelectedCity");//!!!
-        //        }
-        //    }
-        //}
-
         public ICommand ItemCityClickCommand
         {
             get
