@@ -14,15 +14,16 @@ namespace CounterValue.ViewModels
 {
     class AddressPageViewModel : INotifyPropertyChanged
     {
-        private Dictionary<string, Dictionary<string, string>> odeskaOblData;
-        private Dictionary<string, string> city;
-
         public event PropertyChangedEventHandler PropertyChanged;
         protected void OnPropertyChanged(string propName)
         {
             if (PropertyChanged != null)
                 PropertyChanged(this, new PropertyChangedEventArgs(propName));
         }
+
+        private Dictionary<string, Dictionary<string, string>> odeskaOblData;
+        private Dictionary<string, string> city;
+        private string street;
 
         private string title;
         public string Title
@@ -38,19 +39,7 @@ namespace CounterValue.ViewModels
             }
         }
 
-        private ObservableCollection<string> cities;
-        public ObservableCollection<string> Cities //{ get; set; }
-        {
-            get { return cities; }
-            set
-            {
-                if (cities != value)
-                {
-                    cities = value;
-                    OnPropertyChanged("Cities");
-                }
-            }
-        }
+        public ObservableCollection<string> Cities { get; set; }
 
         private bool cityVisible;
         public bool CityVisible
@@ -125,30 +114,26 @@ namespace CounterValue.ViewModels
 
             }
             else
-            {
                 Cities.Clear();
-                //Recipes.Clear();
-                //Init();
-                //ListViewVisible = true;
-                //SuggestionsListViewVisible = false;
-            }
-
         }));
 
         //--------------------------------
-       
-        public string SelectedStreet
-        {
-            set
-            {
-                if (searchStreet != value)
-                {
-                    SearchStreet = value;
 
-                    //city.TryGetValue(SearchStreet, out street);
-                    //var t = city;
-                    StreetVisible = false;
-                }
+        public ICommand ItemStreetClickCommand
+        {
+            get
+            {
+                return new Command((item) =>
+                {
+                    if (searchStreet != item as string)
+                    {
+                        SearchStreet = item as string;
+                        
+                        city.TryGetValue(SearchStreet, out street);
+
+                        StreetVisible = false;
+                    }
+                });
             }
         }
         private string searchStreet { get; set; }
@@ -210,10 +195,7 @@ namespace CounterValue.ViewModels
                 }
             }
             else
-            {
                 Streets.Clear();
-            }
-
         }));
 
 
@@ -222,7 +204,6 @@ namespace CounterValue.ViewModels
         public ICommand NextPageButtonCommand => _nextPageButtonCommand ?? (_nextPageButtonCommand = new Command(async () =>
         {
             await Application.Current.MainPage.Navigation.PushAsync(new CounterValuePageView());
-
         }));
 
         public AddressPageViewModel()
@@ -243,6 +224,22 @@ namespace CounterValue.ViewModels
                 odeskaOblData = JsonConvert.DeserializeObject<Dictionary<string, Dictionary<string, string>>>(text);
             }
 
+        }
+
+        //-------------------------------
+
+        private bool searchHouseVisible;
+        public bool SearchHouseVisible
+        {
+            get { return searchHouseVisible; }
+            set
+            {
+                if (searchHouseVisible != value)
+                {
+                    searchHouseVisible = value;
+                    OnPropertyChanged("SearchHouseVisible");
+                }
+            }
         }
 
         //public ICommand SearchCommand
