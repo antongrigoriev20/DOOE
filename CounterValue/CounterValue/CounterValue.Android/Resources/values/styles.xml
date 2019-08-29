@@ -28,10 +28,21 @@
     <item name="colorAccent">#FF4081</item>
   </style>
 
+
+  <style name="Theme.Splash"
+       parent="Theme.AppCompat.NoActionBar">
+    <item name="windowNoTitle">true</item>
+    <item name="colorPrimary">#2196F3</item>
+    <item name="colorPrimaryDark">#1976D2</item>
+    <item name="android:windowBackground">@drawable/splash_screen</item>
+   </style> 
+    
+
   
   
   <style name="DrawerArrowStyle" parent="@style/Widget.AppCompat.DrawerArrowToggle">
     <item name="spinBars">true</item>
     <item name="color">#000000</item>
+
   </style>
 </resources>

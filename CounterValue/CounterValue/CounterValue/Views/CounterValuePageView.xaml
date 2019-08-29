@@ -29,21 +29,21 @@
 
 
             <Grid IsVisible="{Binding IsVisibleDigit9}">
-                
+
                 <Grid.RowDefinitions>
-                    
+
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>
-                    
+
                 </Grid.RowDefinitions>
-                
+
                 <Grid.ColumnDefinitions>
-                    
+
                     <ColumnDefinition Width="*"></ColumnDefinition>
-                    
+
                 </Grid.ColumnDefinitions>
-                
+
                 <Button     
                     
                             Grid.Row="0"
@@ -56,7 +56,7 @@
                             Command="{Binding Path=BtnTappedCommand}"
                             CommandParameter="9Up">
                 </Button>
-                
+
                 <Label 
                     
                        HorizontalOptions="CenterAndExpand" 
@@ -66,7 +66,7 @@
                        FontSize="Large"
                        Text="{Binding Digit9}">
                 </Label>
-                
+
                 <Button 
                             
                             Grid.Row="2" 
@@ -79,25 +79,25 @@
                             Command="{Binding Path=BtnTappedCommand}"
                             CommandParameter="9Down">
                 </Button>
-                
+
             </Grid>
 
             <Grid IsVisible="{Binding IsVisibleDigit8}">
-                
+
                 <Grid.RowDefinitions>
-                    
+
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>
-                    
+
                 </Grid.RowDefinitions>
-                
+
                 <Grid.ColumnDefinitions>
-                    
+
                     <ColumnDefinition Width="*"></ColumnDefinition>
-                                       
+
                 </Grid.ColumnDefinitions>
-                
+
                 <Button 
                     
                             Grid.Row="0" 
@@ -110,7 +110,7 @@
                             Command="{Binding Path=BtnTappedCommand}"
                             CommandParameter="8Up">
                 </Button>
-                
+
                 <Label 
                     
                        HorizontalOptions="CenterAndExpand" 
@@ -120,7 +120,7 @@
                        FontSize="Large"
                        Text="{Binding Digit8}">
                 </Label>
-                
+
                 <Button 
                     
                             Grid.Row="2"
@@ -133,25 +133,25 @@
                             Command="{Binding Path=BtnTappedCommand}"
                             CommandParameter="8Down">
                 </Button>
-                
+
             </Grid>
 
             <Grid IsVisible="{Binding IsVisibleDigit7}">
-                
+
                 <Grid.RowDefinitions>
-                    
+
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>
-                    
+
                 </Grid.RowDefinitions>
-                
+
                 <Grid.ColumnDefinitions>
-                    
+
                     <ColumnDefinition Width="*"></ColumnDefinition>
-                    
+
                 </Grid.ColumnDefinitions>
-                
+
                 <Button 
                             Grid.Row="0" 
                             Text="＋"
@@ -163,7 +163,7 @@
                             Command="{Binding Path=BtnTappedCommand}"
                             CommandParameter="7Up">
                 </Button>
-                
+
                 <Label 
                     
                        HorizontalOptions="CenterAndExpand" 
@@ -173,7 +173,7 @@
                        FontSize="Large"
                        Text="{Binding Digit7}">
                 </Label>
-                
+
                 <Button 
                             Grid.Row="2" 
                             Text="━"
@@ -185,25 +185,25 @@
                             Command="{Binding Path=BtnTappedCommand}"
                             CommandParameter="7Down">
                 </Button>
-                
+
             </Grid>
-            
+
             <Grid IsVisible="{Binding IsVisibleDigit6}">
-                
+
                 <Grid.RowDefinitions>
-                    
+
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>
-                    
+
                 </Grid.RowDefinitions>
-                
+
                 <Grid.ColumnDefinitions>
 
                     <ColumnDefinition Width="*"/>
-                    
+
                 </Grid.ColumnDefinitions>
-                
+
                 <Button 
                             Grid.Row="0" 
                             Text="＋"
@@ -215,7 +215,7 @@
                             Command="{Binding Path=BtnTappedCommand}"
                             CommandParameter="6Up">
                 </Button>
-                
+
                 <Label 
                     
                        HorizontalOptions="CenterAndExpand" 
@@ -225,7 +225,7 @@
                        FontSize="Large"
                        Text="{Binding Digit6}">
                 </Label>
-                
+
                 <Button 
                     
                             Grid.Row="2" 
@@ -238,25 +238,25 @@
                             Command="{Binding Path=BtnTappedCommand}"
                             CommandParameter="6Down">
                 </Button>
-                
+
             </Grid>
 
             <Grid IsVisible="{Binding IsVisibleDigit5}">
-                
+
                 <Grid.RowDefinitions>
-                    
+
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>
-                    
+
                 </Grid.RowDefinitions>
-                
+
                 <Grid.ColumnDefinitions>
 
                     <ColumnDefinition Width="*"/>
-                    
+
                 </Grid.ColumnDefinitions>
-                
+
                 <Button 
                             Grid.Row="0" 
                             Text="＋"
@@ -268,7 +268,7 @@
                             Command="{Binding Path=BtnTappedCommand}"
                             CommandParameter="5Up">
                 </Button>
-                
+
                 <Label
                     
                        HorizontalOptions="CenterAndExpand" 
@@ -278,7 +278,7 @@
                        FontSize="Large"
                        Text="{Binding Digit5}">
                 </Label>
-                
+
                 <Button 
                             Grid.Row="2" 
                             Text="━"
@@ -290,25 +290,25 @@
                             Command="{Binding Path=BtnTappedCommand}"
                             CommandParameter="5Down">
                 </Button>
-                
+
             </Grid>
 
             <Grid>
-                
+
                 <Grid.RowDefinitions>
-                    
+
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>
-                    
+
                 </Grid.RowDefinitions>
-                
+
                 <Grid.ColumnDefinitions>
 
                     <ColumnDefinition Width="*"/>
-                    
+
                 </Grid.ColumnDefinitions>
-                
+
                 <Button 
                     
                             Grid.Row="0" 
@@ -321,7 +321,7 @@
                             Command="{Binding Path=BtnTappedCommand}"
                             CommandParameter="4Up">
                 </Button>
-                
+
                 <Label 
                         
                        HorizontalOptions="CenterAndExpand" 
@@ -331,7 +331,7 @@
                        FontSize="Large"
                        Text="{Binding Digit4}">
                 </Label>
-                
+
                 <Button                     
          
                         Grid.Row="2" 
@@ -344,25 +344,25 @@
                             Command="{Binding Path=BtnTappedCommand}"
                             CommandParameter="4Down">
                 </Button>
-                
+
             </Grid>
 
             <Grid>
-                
+
                 <Grid.RowDefinitions>
-                    
+
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>
-                    
+
                 </Grid.RowDefinitions>
-                
+
                 <Grid.ColumnDefinitions>
 
                     <ColumnDefinition Width="*"/>
-                    
+
                 </Grid.ColumnDefinitions>
-                
+
                 <Button 
                     
                             Grid.Row="0" 
@@ -375,17 +375,17 @@
                             Command="{Binding Path=BtnTappedCommand}"
                             CommandParameter="3Up">
                 </Button>
-                
-                <Label 
-                    
-                       HorizontalOptions="CenterAndExpand" 
+
+                <Label
+
+                    HorizontalOptions="CenterAndExpand" 
                        VerticalOptions="CenterAndExpand"
                        Grid.Row="1"
                        Grid.Column="0" 
                        FontSize="Large"
                        Text="{Binding Digit3}">
                 </Label>
-                
+
                 <Button 
                             Grid.Row="2" 
                             Text="━"
@@ -397,25 +397,25 @@
                             Command="{Binding Path=BtnTappedCommand}"
                             CommandParameter="3Down">
                 </Button>
-                
+
             </Grid>
 
             <Grid>
-                
+
                 <Grid.RowDefinitions>
-                    
+
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>
-                    
+
                 </Grid.RowDefinitions>
-                
+
                 <Grid.ColumnDefinitions>
 
                     <ColumnDefinition Width="*"/>
-                    
+
                 </Grid.ColumnDefinitions>
-                
+
                 <Button 
                     
                             Grid.Row="0" 
@@ -428,7 +428,7 @@
                             Command="{Binding Path=BtnTappedCommand}"
                             CommandParameter="2Up">
                 </Button>
-                
+
                 <Label 
                     
                        HorizontalOptions="CenterAndExpand" 
@@ -438,7 +438,7 @@
                        FontSize="Large"
                        Text="{Binding Digit2}">
                 </Label>
-                
+
                 <Button 
                     
                             Grid.Row="2" 
@@ -451,25 +451,25 @@
                             Command="{Binding Path=BtnTappedCommand}"
                             CommandParameter="2Down">
                 </Button>
-                
+
             </Grid>
 
             <Grid>
-                
+
                 <Grid.RowDefinitions>
-                    
+
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>
-                    
+
                 </Grid.RowDefinitions>
-                
+
                 <Grid.ColumnDefinitions>
 
                     <ColumnDefinition Width="*"/>
-                    
+
                 </Grid.ColumnDefinitions>
-                
+
                 <Button 
                     
                             Grid.Row="0" 
@@ -482,7 +482,7 @@
                             Command="{Binding Path=BtnTappedCommand}"
                             CommandParameter="1Up">
                 </Button>
-                
+
                 <Label 
                     
                        HorizontalOptions="CenterAndExpand" 
@@ -492,7 +492,7 @@
                        FontSize="Large"
                        Text="{Binding Digit1}">
                 </Label>
-                
+
                 <Button 
                     
                             Grid.Row="2" 
@@ -505,11 +505,11 @@
                             Command="{Binding Path=BtnTappedCommand}"
                             CommandParameter="1Down">
                 </Button>
-                
+
             </Grid>
 
         </StackLayout>
-        
+
         <Button 
                 Command="{Binding SendIndicators}"    
                 Text="Додати" 
@@ -519,30 +519,18 @@
                 WidthRequest="200"              
                 HorizontalOptions="Center"
                 VerticalOptions="Center">
-            
+
         </Button>
-
-        <StackLayout Orientation="Vertical" IsVisible="{Binding LastDataVisible}">
-            <Label 
-               Text="Показники на:"
-               TextColor="Gray"
-               VerticalOptions="CenterAndExpand"
-               HorizontalOptions="CenterAndExpand"
-               HorizontalTextAlignment="Center"
-               FontSize="Small" />
-
-            <Label Text="{Binding LastData}"
+        <Label Text="{Binding LastData}"
                    FontSize="Medium"
                VerticalOptions="CenterAndExpand"
                HorizontalOptions="CenterAndExpand"
                HorizontalTextAlignment="Center"></Label>
-            <Label Text="{Binding PenultimateData}"
+        <Label Text="{Binding PenultimateData}"
                    FontSize="Small"
                VerticalOptions="CenterAndExpand"
                HorizontalOptions="CenterAndExpand"
                HorizontalTextAlignment="Center"></Label>
-        </StackLayout>
-
     </StackLayout>
-    
+
 </ContentPage>
