@@ -13,8 +13,7 @@ namespace CounterValue.Views
     // by visiting https://aka.ms/xamarinforms-previewer
     [DesignTimeVisible(false)]
     public partial class MainPage : ContentPage
-    {
-        public MainPage()
+    {       public MainPage()
         {
             InitializeComponent();
             BindingContext = new MainPageViewModel();
